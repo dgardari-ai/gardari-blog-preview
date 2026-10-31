@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Публикации и статьи Дениса Гардари. Прототип главной страницы в визуальном языке Галереи Гардари.">
+  <title>Публикации и статьи · Денис Гардари — прототип</title>
+  <link rel="preconnect" href="https://static.tildacdn.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <div class="page-shell" id="top">
+    <div class="header-sticky">
+      <header class="matrix-header">
+        <form class="search-rail" id="search-form" role="search" autocomplete="off">
+        <a class="brand-mark" href="#top" aria-label="Публикации и статьи — на главную">
+          <svg class="brand-pill-logo" viewBox="88 112 306 303" aria-hidden="true" focusable="false">
+            <image href="https://dgardari-ai.github.io/gardari-gallery-preview/assets/gallery-logo-original.png" width="490" height="490"></image>
+          </svg>
+          <span class="brand-fallback" aria-hidden="true">г</span>
+        </a>
+        <label class="visually-hidden" for="material-search">Поиск по названиям, темам и словам публикаций</label>
+        <input id="material-search" class="search-field" type="search" placeholder="БЛОГ ГАРДАРИ: ПОИСК ПО СТАТЬЯМ, ТЕМАМ, СЛОВАМ..." spellcheck="false" aria-controls="search-results" aria-expanded="false">
+        <button class="search-submit" type="submit" aria-label="Найти публикации">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.6" cy="10.6" r="6.7"/><path d="m16 16 5 5"/></svg>
+        </button>
+        <div class="search-results" id="search-results" role="region" aria-live="polite" aria-label="Найденные материалы" hidden></div>
+        </form>
+        <nav class="matrix-nav" id="matrix-nav" aria-label="Разделы Блога"></nav>
+      </header>
+    </div>
+
+    <main>
+      <section class="image-accordion" aria-label="Подборка публикаций">
+        <div class="accordion-track" id="accordion-track"></div>
+      </section>
+      <div class="content-grid">
+        <section class="article-column" data-slot="latest-publication" aria-label="Актуальная статья">
+          <article class="main-article" id="article">
+            <div class="article-heading">
+              <div class="column-kicker">
+                <time class="date-ticker" datetime="2023-05-30" aria-label="30.05.2023"><span data-count-to="30" data-digits="2" aria-hidden="true">30</span><span class="ticker-dot" aria-hidden="true">.</span><span data-count-to="5" data-digits="2" aria-hidden="true">05</span><span class="ticker-dot" aria-hidden="true">.</span><span data-count-to="2023" data-digits="4" aria-hidden="true">2023</span></time>
+              </div>
+              <div class="article-meta"><span>ЗАНИМАТЕЛЬНАЯ КУЛЬТУРОЛОГИЯ</span></div>
+              <h1>КАК ПРАВИЛЬНО<br>СМОТРЕТЬ КАРТИНЫ?</h1>
+            </div>
+            <div class="article-body">
+            <p>Честно говоря, ещё более странная формулировка, чем про правильные музейные походы в прошлом посте. Хоть стоя на голове смотрите, если вам от этого хорошо . Но, все-таки, есть базовые правила, которые при разумном использовании могут стать основой вашего собственного метода!</p>
+            <p>Жил 100-150 лет назад один крутой чувак, звали его Адольф Гильдебрандт, скульптор и теоретик, основоположник формализма в эстетике. Так вот он первый начал говорить про правильное зрение. В его трактовке — это восприятие, приведенное к спокойствию и порядку независимо от объективного содержания. Согласно Гильдебранду, можно «правильно» смотреть на вещь искусства, отбросив в сторону все вопросы об объективной истине как не имеющие отношения к искусству.</p>
+            <p>Я надеюсь все мои читатели умные и вменяемые люди и понимают, что это определенное упрощение и понято должно быть в контексте рассуждений именно о СМОТРЕНИИ картины. «Правильно смотреть» — вовсе не гарантия глубокого вИдения, но как минимум, хорошее подспорье!</p>
+            <p>Я сторонник иммерсивного смотрения, дающего возможность погрузиться в картину. Поэтому — техника: Базовое расстояние смотрения (БРС) от 1 до 2 диагоналей картины, в зависимости от индивидуальных особенностей зрения. Ближе подходим, чтобы рассмотреть нюансы и фактуру, дальше отходим, чтобы отвлечься от деталей и схватить композицию.</p>
+            <p>Пару минут рассматриваем картину с разных расстояний, затем находим свою точку БРС и начинаем смотреть, фокусируя взгляд в центре картины и рассматривая всю поверхность только периферийным зрением. Затем расфокусируем взгляд (как в детстве разглядывали объемные картинки) и пытаемся поймать объём. Потом снова просто смотрим. Можно повторять столько раз, сколько получится или захочется.</p>
+            </div>
+          </article>
+        </section>
+
+        <div class="aside-dock">
+          <aside class="links-column" aria-label="Дополнительные материалы" tabindex="0">
+          <section class="sidebar-block" id="topics">
+            <div class="sidebar-kicker">ПОДБОРКА МАТЕРИАЛОВ <span>01</span></div>
+            <div id="related-list"></div>
+          </section>
+          <section class="sidebar-block" id="cycles">
+            <div class="sidebar-kicker">ЦИКЛЫ <span>02</span></div>
+            <a class="simple-link" href="https://gardari.art/article4/tpost/i8a9zp1gg1-konturi-buduschego-1-prishlo-drugoe-vrem" target="_blank" rel="noopener noreferrer"><span>КОНТУРЫ БУДУЩЕГО</span><small>4 ОЧЕРКА</small></a>
+            <a class="simple-link" href="https://gardari.art/article3/tpost/xnxaux4eg1-russkii-kulturnii-kod-ocherk-n1" target="_blank" rel="noopener noreferrer"><span>РУССКИЙ КУЛЬТУРНЫЙ КОД</span><small>5 ОЧЕРКОВ</small></a>
+            <a class="simple-link" href="https://gardari.art/article2/tpost/7ajorvb8k1-chto-est-tvorchestvo" target="_blank" rel="noopener noreferrer"><span>БЕСЕДЫ О ТВОРЧЕСТВЕ</span><small>НАЧАТЬ С ПЕРВОЙ</small></a>
+          </section>
+          <section class="sidebar-block is-featured" id="club">
+            <div class="sidebar-kicker">КЛУБ <span>03</span></div>
+            <h2>КЛУБ<br>ГАРДАРИ</h2>
+            <p>Лекции по истории искусства и теории культуры.</p>
+            <a class="club-link" href="https://gardari.art/gardari_club" target="_blank" rel="noopener noreferrer">ПЕРЕЙТИ В КЛУБ</a>
+          </section>
+          </aside>
+        </div>
+      </div>
+      <footer class="reading-footer" id="after-article" aria-labelledby="reading-footer-title">
+        <div class="reading-footer-intro">
+          <span class="reading-footer-kicker">БЛОГ ГАРДАРИ</span>
+          <h2 id="reading-footer-title">ЧИТАТЬ<br>ДАЛЬШЕ</h2>
+          <div class="footer-share-actions">
+            <button class="share-article" type="button" id="share-article">ПОДЕЛИТЬСЯ СТАТЬЁЙ</button>
+            <span class="share-feedback" id="share-feedback" role="status" aria-live="polite"></span>
+          </div>
+          <nav class="footer-resource-nav" id="footer-resource-nav" aria-label="Другие ресурсы Гардари"></nav>
+        </div>
+
+        <div class="reading-footer-accordion" id="reading-footer-accordion" aria-label="Навигация после статьи">
+          <section class="footer-fold is-open is-always-open">
+            <h3 class="footer-fold-heading" id="footer-heading-dates">ПО ДАТАМ</h3>
+            <div class="footer-fold-panel" id="footer-panel-dates" role="region" aria-labelledby="footer-heading-dates">
+              <div class="footer-fold-inner">
+                <div class="footer-date-record">
+                  <span class="footer-record-label">ПРЕДЫДУЩАЯ ДАТА В ПОДБОРКЕ</span>
+                  <a class="footer-date" href="https://gardari.art/article5/tpost/rnraiinl31-radi-dozhdya" target="_blank" rel="noopener noreferrer"><time datetime="2023-04-19">19.04.2023</time></a>
+                  <span class="footer-date-separator" aria-hidden="true"> / </span>
+                  <a class="footer-record-title" href="https://gardari.art/article5/tpost/rnraiinl31-radi-dozhdya" target="_blank" rel="noopener noreferrer">РАДИ ДОЖДЯ</a>
+                </div>
+                <div class="footer-date-record">
+                  <span class="footer-record-label">СЛУЧАЙНАЯ ДАТА В ПОДБОРКЕ</span>
+                  <a class="footer-date" id="footer-random-date" href="https://gardari.art/article3/tpost/yocnsldan1-kak-pravilno-hodit-v-muzei" target="_blank" rel="noopener noreferrer"><time datetime="2023-05-30">30.05.2023</time></a>
+                  <span class="footer-date-separator" aria-hidden="true"> / </span>
+                  <a class="footer-record-title" id="footer-random-title" href="https://gardari.art/article3/tpost/yocnsldan1-kak-pravilno-hodit-v-muzei" target="_blank" rel="noopener noreferrer">КАК ПРАВИЛЬНО ХОДИТЬ В МУЗЕИ?</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="footer-fold">
+            <h3><button class="footer-fold-trigger" id="footer-trigger-related" type="button" aria-expanded="false" aria-controls="footer-panel-related"><span>ПО СМЫСЛУ</span><span class="footer-fold-mark" aria-hidden="true">+</span></button></h3>
+            <div class="footer-fold-panel" id="footer-panel-related" role="region" aria-labelledby="footer-trigger-related" aria-hidden="true" inert>
+              <div class="footer-fold-inner">
+                <div class="footer-date-record">
+                  <a class="footer-date" href="https://gardari.art/article3/tpost/yocnsldan1-kak-pravilno-hodit-v-muzei" target="_blank" rel="noopener noreferrer"><time datetime="2023-05-30">30.05.2023</time></a>
+                  <span class="footer-date-separator" aria-hidden="true"> / </span>
+                  <a class="footer-record-title" href="https://gardari.art/article3/tpost/yocnsldan1-kak-pravilno-hodit-v-muzei" target="_blank" rel="noopener noreferrer">КАК ПРАВИЛЬНО ХОДИТЬ В МУЗЕИ?</a>
+                </div>
+                <div class="footer-date-record">
+                  <a class="footer-date" href="https://gardari.art/article3/tpost/aoxeinend1-ponimanie-sovremennogo-iskusstva" target="_blank" rel="noopener noreferrer"><time datetime="2023-05-30">30.05.2023</time></a>
+                  <span class="footer-date-separator" aria-hidden="true"> / </span>
+                  <a class="footer-record-title" href="https://gardari.art/article3/tpost/aoxeinend1-ponimanie-sovremennogo-iskusstva" target="_blank" rel="noopener noreferrer">ПОНИМАНИЕ СОВРЕМЕННОГО ИСКУССТВА</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="footer-fold">
+            <h3><button class="footer-fold-trigger" id="footer-trigger-topic" type="button" aria-expanded="false" aria-controls="footer-panel-topic"><span>В ЭТОЙ РУБРИКЕ</span><span class="footer-fold-mark" aria-hidden="true">+</span></button></h3>
+            <div class="footer-fold-panel" id="footer-panel-topic" role="region" aria-labelledby="footer-trigger-topic" aria-hidden="true" inert>
+              <div class="footer-fold-inner">
+                <div class="footer-date-record">
+                  <a class="footer-date" href="https://gardari.art/article3/tpost/xnxaux4eg1-russkii-kulturnii-kod-ocherk-n1" target="_blank" rel="noopener noreferrer"><time datetime="2023-04-14">14.04.2023</time></a>
+                  <span class="footer-date-separator" aria-hidden="true"> / </span>
+                  <a class="footer-record-title" href="https://gardari.art/article3/tpost/xnxaux4eg1-russkii-kulturnii-kod-ocherk-n1" target="_blank" rel="noopener noreferrer">РУССКИЙ КУЛЬТУРНЫЙ КОД</a>
+                </div>
+                <div class="footer-date-record">
+                  <a class="footer-date" href="https://gardari.art/article3/tpost/aoxeinend1-ponimanie-sovremennogo-iskusstva" target="_blank" rel="noopener noreferrer"><time datetime="2023-05-30">30.05.2023</time></a>
+                  <span class="footer-date-separator" aria-hidden="true"> / </span>
+                  <a class="footer-record-title" href="https://gardari.art/article3/tpost/aoxeinend1-ponimanie-sovremennogo-iskusstva" target="_blank" rel="noopener noreferrer">ПОНИМАНИЕ СОВРЕМЕННОГО ИСКУССТВА</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="footer-fold">
+            <h3><button class="footer-fold-trigger" id="footer-trigger-info" type="button" aria-expanded="false" aria-controls="footer-panel-info"><span>ИНФОРМАЦИЯ</span><span class="footer-fold-mark" aria-hidden="true">+</span></button></h3>
+            <div class="footer-fold-panel" id="footer-panel-info" role="region" aria-labelledby="footer-trigger-info" aria-hidden="true" inert>
+              <div class="footer-fold-inner footer-info-placeholder">
+                <p>ССЫЛКИ, ДОКУМЕНТЫ И ПОЛИТИКА САЙТА ПОЯВЯТСЯ ЗДЕСЬ.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
