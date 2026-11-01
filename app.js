@@ -429,3 +429,31 @@ initAsideDock();
 initRandomFooterDate();
 initReadingFooterAccordion();
 initArticleShare();
+
+/* Gallery entrance: logo 800ms, rail 456+440ms, top-axis folds 420/90ms. */
+async function initBlogEntrance() {
+  const root = document.documentElement;
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const animations = [];
+  const finish = () => { animations.forEach(a => a.cancel()); root.classList.remove('blog-enter-pending'); };
+  if (reduced.matches || new URLSearchParams(location.search).has('editor_view')) { finish(); return; }
+  try {
+    await document.fonts.ready;
+    await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+    const ease = 'cubic-bezier(.16,1,.3,1)';
+    const animate = (element, frames, duration, delay=0, easing=ease) => {
+      const a = element.animate(frames, {duration, delay, easing, fill:'both'});
+      animations.push(a); return a;
+    };
+    const rail = document.querySelector('.search-rail');
+    animate(rail, [{clipPath:`inset(0 ${Math.max(0,rail.offsetWidth-rail.offsetHeight)}px 0 0 round 40px)`,opacity:1}, {clipPath:'inset(0 0px 0 0 round 40px)',opacity:1}],440,456);
+    animate(document.querySelector('.brand-mark'),[{transform:'scale(.015)',offset:0},{transform:'scale(1.3)',offset:.65},{transform:'scale(1)',offset:1}],800,0,'ease-in-out');
+    for (const selector of ['.search-field','.search-submit']) animate(document.querySelector(selector),[{opacity:0},{opacity:1}],160,800);
+    document.querySelectorAll('.matrix-nav .section-tab').forEach((el,i)=>animate(el,[{opacity:0,transform:'perspective(650px) rotateX(-86deg)'},{opacity:1,transform:'perspective(650px) rotateX(0deg)'}],420,i*90));
+    document.querySelectorAll('.accordion-panel').forEach((el,i)=>animate(el,[{opacity:0,transform:'perspective(650px) rotateX(-86deg)'},{opacity:1,transform:'perspective(650px) rotateX(0deg)'}],420,380+i*90));
+    reduced.addEventListener('change',finish,{once:true});
+    await Promise.all(animations.map(a=>a.finished.catch(()=>{})));
+    reduced.removeEventListener('change',finish);
+  } finally { finish(); }
+}
+initBlogEntrance();

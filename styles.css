@@ -36,7 +36,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 }
 .page-shell {
   width: min(964px, calc(100vw - 32px));
-  margin: 86px auto 70px;
+  margin: 12px auto 70px;
 }
 
 /* The sticky white sleeve masks content above and below the Gallery header. */
@@ -205,7 +205,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 
 /* Seven panels: the open item stays square, with the original 17px corners. */
 .image-accordion {
-  margin-top: 32px;
+  margin-top: 14px;
   container-type: inline-size;
 }
 .accordion-track {
@@ -436,7 +436,8 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .related-item span { display: flex; flex-direction: column; gap: 5px; }
 .related-item small { color: #73787c; font: 500 9px/1.2 var(--mono); }
 .related-item strong { font: 900 14px/1.06 Arial, sans-serif; text-transform: uppercase; }
-.related-item:hover strong { text-decoration: underline; }
+.related-item strong { display: inline-block; transform-origin: left center; transition: transform .23s cubic-bezier(.2,.8,.2,1); }
+.related-item:hover strong { transform: scale(1.035); }
 .simple-link {
   display: flex;
   flex-direction: column;
@@ -447,7 +448,8 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 }
 .simple-link span { font: 900 15px/1.15 Arial, sans-serif; }
 .simple-link small { color: #777c80; font: 9px/1.15 var(--mono); }
-.simple-link:hover span { text-decoration: underline; }
+.simple-link span { transform-origin: left center; transition: transform .23s cubic-bezier(.2,.8,.2,1); }
+.simple-link:hover span { transform: scale(1.035); }
 .sidebar-block h2 {
   margin: 0 0 12px;
   font: 900 27px/.99 Arial, sans-serif;
@@ -655,7 +657,7 @@ a.footer-date:hover, .footer-record-title:hover { transform: scale(1.035); }
 }
 
 @media (max-width: 800px) {
-  .page-shell { margin-top: 34px; }
+  .page-shell { margin-top: 12px; }
   .content-grid { grid-template-columns: minmax(0, 1fr) 274px; }
   .main-article { padding-right: 9px; }
   .reading-footer { grid-template-columns: minmax(0,38%) minmax(0,1fr); }
@@ -663,7 +665,7 @@ a.footer-date:hover, .footer-record-title:hover { transform: scale(1.035); }
   .article-meta { flex-wrap: wrap; }
 }
 @media (max-width: 680px) {
-  .page-shell { width: min(100% - 28px, 540px); margin-top: 23px; }
+  .page-shell { width: min(100% - 28px, 540px); margin-top: 12px; }
   .matrix-header { grid-template-columns: 1fr; gap: 13px; }
   .matrix-nav { grid-template-columns: repeat(4,61px); gap: 9px; }
   .search-rail { height: 57px; }
@@ -718,3 +720,7 @@ a.footer-date:hover, .footer-record-title:hover { transform: scale(1.035); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+/* Shared entrance: Gallery timing and top-axis unfolding. */
+.blog-enter-pending .search-rail, .blog-enter-pending .matrix-nav .section-tab, .blog-enter-pending .accordion-panel { opacity: 0; }
+.matrix-nav .section-tab, .accordion-panel { transform-origin: 50% 0; }
