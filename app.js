@@ -75,6 +75,11 @@ const articles = [
   }
 ];
 
+const completedArticles = [{"postId": "article-paintings", "title": "КАК ПРАВИЛЬНО СМОТРЕТЬ КАРТИНЫ?", "short": "КАК ПРАВИЛЬНО СМОТРЕТЬ КАРТИНЫ?", "topic": "ЗАНИМАТЕЛЬНАЯ КУЛЬТУРОЛОГИЯ", "detail": "Денис Гардари об иммерсивном смотрении картины: расстояние, детали, композиция и периферийное зрение.", "image": "https://static.tildacdn.com/tild3666-6265-4566-a565-653831356639/022.jpeg", "url": "https://dgardari-ai.github.io/gardari-blog-preview/articles/kak-smotret-kartiny.html"}, {"postId": "article-levels", "title": "ПЯТЬ УРОВНЕЙ «Я».", "short": "ПЯТЬ УРОВНЕЙ «Я».", "topic": "ЗАНИМАТЕЛЬНАЯ ФИЛОСОФИЯ", "detail": "Размышления Дениса Гардари об ответственности, поиске своего дела и становлении мировоззрения. Авторская модель пяти уровней «Я».", "image": "https://static.tildacdn.com/tild6637-3230-4332-a362-353137646137/DSC_3752.jpeg", "url": "https://dgardari-ai.github.io/gardari-blog-preview/articles/pyat-urovney-ya.html"}, {"postId": "sample-brera", "title": "ГАЛЕРЕЯ БРЕРА", "short": "ГАЛЕРЕЯ БРЕРА", "topic": "ОЧЕРКИ ОБ ИСКУССТВЕ И ХУДОЖНИКАХ", "detail": "Фотозаметки Дениса Гардари из миланской Галереи Брера: восемь фотографий искусства предвозрождения.", "image": "https://static.tildacdn.com/tild3266-3034-4161-a662-633330623233/021.jpeg", "url": "https://dgardari-ai.github.io/gardari-blog-preview/articles/galereya-brera.html"}, {"postId": "sample-hundertwasser", "title": "ФРИДЕНСРАЙХ ХУНДЕРТВАССЕР", "short": "ФРИДЕНСРАЙХ ХУНДЕРТВАССЕР", "topic": "ОЧЕРКИ ОБ ИСКУССТВЕ И ХУДОЖНИКАХ", "detail": "Денис Гардари о свободе, живописи и архитектуре Фриденсрайха Хундертвассера. Очерк с десятью фотографиями.", "image": "https://static.tildacdn.com/tild3336-3835-4536-b334-623131363537/021.jpeg", "url": "https://dgardari-ai.github.io/gardari-blog-preview/articles/hundertwasser.html"}, {"postId": "sample-modern-art", "title": "ПОНИМАНИЕ СОВРЕМЕННОГО ИСКУССТВА", "short": "ПОНИМАНИЕ СОВРЕМЕННОГО ИСКУССТВА", "topic": "ОЧЕРКИ ОБ ИСКУССТВЕ И ХУДОЖНИКАХ;ЗАНИМАТЕЛЬНАЯ КУЛЬТУРОЛОГИЯ", "detail": "Как смотреть на современное искусство без предубеждения: живое восприятие, ресентимент и уважение к непонятности. Разбор Дениса Гардари.", "image": "https://static.tildacdn.com/tild6366-3066-4136-b635-393866643265/024.jpeg", "url": "https://dgardari-ai.github.io/gardari-blog-preview/articles/ponimanie-sovremennogo-iskusstva.html"}, {"postId": "sample-advice", "title": "7 СОВЕТОВ НАЧИНАЮЩЕМУ ХУДОЖНИКУ", "short": "7 СОВЕТОВ НАЧИНАЮЩЕМУ ХУДОЖНИКУ", "topic": "ОЧЕРКИ ОБ ИСКУССТВЕ И ХУДОЖНИКАХ;ЗАНИМАТЕЛЬНАЯ ФИЛОСОФИЯ", "detail": "Денис Гардари о начале творческого пути: самостоятельность, учёба, материалы и отношение к советам мастеров.", "image": "https://static.tildacdn.com/tild3530-6537-4133-a338-303238626434/023.jpeg", "url": "https://dgardari-ai.github.io/gardari-blog-preview/articles/7-sovetov-hudozhniku.html"}];
+const normalizedTitle = value => value.toLocaleLowerCase('ru-RU').replace(/[^а-яёa-z0-9]/g,'');
+completedArticles.forEach(item=>{const at=articles.findIndex(a=>normalizedTitle(a.title)===normalizedTitle(item.title));if(at>=0)articles[at]={...articles[at],...item};else articles.push(item);});
+const isInternalArticle = value => value.startsWith("https://dgardari-ai.github.io/gardari-blog-preview/articles/");
+
 const tabShape = 'M 46.79072656342929 0.5 H 66.666667 A 11.5 11.5 0 0 1 78.166667 12 V 66.666667 A 11.5 11.5 0 0 1 66.666667 78.166667 H 12 A 11.5 11.5 0 0 1 0.5 66.666667 V 46.79072656342929 A 11.5 11.5 0 0 1 12.767732953990608 35.316381871406264 A 21.181818156064274 21.181818156064274 0 0 0 35.316381871406264 12.767732953990608 A 11.5 11.5 0 0 1 46.79072656342929 0.5 Z';
 const escapeHtml = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
@@ -141,7 +146,7 @@ function buildAccordion() {
     panel.className = 'accordion-panel' + (index === 0 ? ' is-open' : '');
     panel.innerHTML = [
       '<a class="panel-activate" href="',item.url,
-      '" target="_blank" rel="noopener noreferrer" aria-label="Читать статью: ',escapeHtml(item.title),'">',
+      '"',isInternalArticle(item.url)?'':' target="_blank" rel="noopener noreferrer"',' aria-label="Читать статью: ',escapeHtml(item.title),'">',
       '<img src="',item.image,'" alt="Исходная иллюстрация публикации «',escapeHtml(item.title),'»" loading="eager">',
       '<span class="panel-overlay"></span>',
       '<span class="panel-title-vertical">',escapeHtml(item.short),'</span>',
@@ -171,21 +176,6 @@ function buildAccordion() {
   });
 }
 
-function buildRelated() {
-  const holder=document.getElementById('related-list');
-  [articles[5],articles[1],articles[2]].forEach(item=>{
-    const link=document.createElement('a');
-    link.className='related-item';
-    link.href=item.url;
-    link.target='_blank';
-    link.rel='noopener noreferrer';
-    link.innerHTML='<img src="'+item.image+'" loading="lazy" alt="">'
-      +'<span><small>'+escapeHtml(item.topic.replace('ЗАНИМАТЕЛЬНАЯ ',''))+'</small>'
-      +'<strong>'+escapeHtml(item.short)+'</strong></span>';
-    holder.append(link);
-  });
-}
-
 function initSearch() {
   const form=document.getElementById('search-form');
   const input=document.getElementById('material-search');
@@ -211,8 +201,7 @@ function initSearch() {
       const link=document.createElement('a');
       link.className='search-result';
       link.href=a.url;
-      link.target='_blank';
-      link.rel='noopener noreferrer';
+      if(!isInternalArticle(a.url)){link.target='_blank';link.rel='noopener noreferrer';}
       const strong=document.createElement('strong');
       strong.textContent=a.title;
       const small=document.createElement('small');
@@ -226,11 +215,12 @@ function initSearch() {
   input.addEventListener('input',show);
   input.addEventListener('focus',()=>{if(input.value.trim())show();});
   input.addEventListener('keydown',e=>{
-    if(e.key==='Escape'){close();input.blur();}
+    if(e.key==='Escape'){close();input.focus();}
     if(e.key==='ArrowDown'&&!list.hidden){list.querySelector('.search-result')?.focus();e.preventDefault();}
   });
   form.addEventListener('submit',e=>{e.preventDefault();show();list.querySelector('.search-result')?.focus();});
   document.addEventListener('pointerdown',e=>{if(!form.contains(e.target))close();});
+  form.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();close();input.focus();}});
 }
 
 function initDateTicker() {
@@ -354,37 +344,17 @@ function initReadingFooterAccordion() {
   update(folds.find(fold=>fold.classList.contains('is-open')) || null);
 }
 
-function initRandomFooterDate() {
-  const dateLink = document.getElementById('footer-random-date');
-  const titleLink = document.getElementById('footer-random-title');
-  if (!dateLink || !titleLink) return;
-  /* Every entry is an actual dated Gardari publication, distinct from the
-     previous-date record. The choice changes on page load. */
-  const candidates = [
-    { date:'14.04.2023', iso:'2023-04-14', title:'РУССКИЙ КУЛЬТУРНЫЙ КОД', url:'https://gardari.art/article3/tpost/xnxaux4eg1-russkii-kulturnii-kod-ocherk-n1' },
-    { date:'30.05.2023', iso:'2023-05-30', title:'КАК ПРАВИЛЬНО ХОДИТЬ В МУЗЕИ?', url:'https://gardari.art/article3/tpost/yocnsldan1-kak-pravilno-hodit-v-muzei' },
-    { date:'31.05.2023', iso:'2023-05-31', title:'ПЛАСТИКА МИКЕЛАНДЖЕЛО', url:'https://gardari.art/gardari_club/tpost/6fefvusvr1-plastika-mikelandzhelo' }
-  ];
-  const selected = candidates[Math.floor(Math.random() * candidates.length)];
-  dateLink.href = selected.url;
-  titleLink.href = selected.url;
-  const time = dateLink.querySelector('time');
-  time.dateTime = selected.iso;
-  time.textContent = selected.date;
-  titleLink.textContent = selected.title;
-}
-
 function initArticleShare() {
   const button = document.getElementById('share-article');
   const feedback = document.getElementById('share-feedback');
   if (!button || !feedback) return;
   button.addEventListener('click',async()=>{
-    const link = new URL(location.href);
-    link.hash = 'article';
+    const link = new URL("https://dgardari-ai.github.io/gardari-blog-preview/articles/kak-smotret-kartiny.html");
+    link.hash = '';
     if (navigator.share) {
       try {
         await navigator.share({
-          title: document.querySelector('.main-article h1')?.textContent.trim() || document.title,
+          title: document.querySelector('.main-article h1')?.innerText.replace(/\s+/g,' ').trim() || document.title,
           url: link.href
         });
         return;
@@ -422,11 +392,9 @@ function initArticleShare() {
 buildNavigation();
 buildFooterResources();
 buildAccordion();
-buildRelated();
 initSearch();
 initDateTicker();
 initAsideDock();
-initRandomFooterDate();
 initReadingFooterAccordion();
 initArticleShare();
 

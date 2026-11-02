@@ -17,7 +17,90 @@
   <link rel="stylesheet" href="./styles.css">
   <script>document.documentElement.classList.add("blog-enter-pending");</script>
   <script defer src="./app.js"></script>
-</head>
+<style id="article-standard-v1">/* restored-a.css */
+/* Only new article-page elements. All existing components use accepted.css unchanged. */
+.article-cover{display:block;text-decoration:none}
+.article-cover img{display:block;width:100%;height:auto;border-radius:7px}
+.cover-contents.a2 .article-cover{width:176px;max-width:100%;margin:0 auto}
+.article-contents{margin-top:18px}
+.cover-contents.a3 .article-contents{margin-top:0}
+.cover-contents.a3 .article-cover{margin-top:18px}
+.article-contents .simple-link:first-of-type{border-top:0}
+.article-contents .simple-link[aria-current="location"] span{background:var(--yellow)}
+.context-before{margin:0 0 19px;padding:12px 16px;background:var(--sidebar-info-bg);border-radius:9px;font:500 10px/1.5 var(--mono)}
+.context-before>span{display:block;margin-bottom:6px;color:var(--muted)}
+.context-before a{display:inline-block;font:700 13px/1.3 var(--mono);text-decoration:none;transform-origin:left center;transition:transform .23s}
+.context-before a:hover{transform:scale(1.035)}
+.main-article h2{margin:28px 0 19px;font:900 27px/1.1 Arial,sans-serif;letter-spacing:-.025em;scroll-margin-top:300px}
+.main-article h3{margin:19px 0;font:700 17px/1.39 Arial,sans-serif;color:var(--muted)}
+@media(max-width:680px){.main-article h2{scroll-margin-top:20px}}
+
+/* article-components.css */
+/* Selected photo-first basis; these proposals affect only explanatory lists. */
+html.explanation-preview{scroll-behavior:auto}
+.cover-contents.a2 .article-cover{width:100%;margin:0}
+.cover-contents.a2{padding:0;overflow:hidden}
+.cover-contents.a2 .article-cover img{border-radius:0}
+.cover-contents.a2 .article-contents{margin:0;padding:16px 16px 18px}
+.explanation{margin:19px 0}
+.main-article .explanation h3{margin:0 0 8px;scroll-margin-top:260px}
+.explanation ul{margin:0;padding:0;list-style:none}
+.explanation li{color:var(--muted);font:italic 17px/1.3 Arial,Helvetica,sans-serif}
+/* Accepted: an individual rail for every explanatory phrase, no paragraph gaps. */
+.explanation li{position:relative;margin:0;padding:0 0 0 14px}
+.explanation li:before{content:'';position:absolute;left:0;top:3px;bottom:3px;width:1px;background:var(--line)}
+.main-article .explanation li p{font:inherit;margin:0}
+@media(max-width:680px){.explanation li{font-size:16px;line-height:1.3}}
+
+/* article-refinements.css */
+/* Applied refinements authorized after the six-page audit. */
+.article-meta{color:var(--muted)}
+.article-heading .article-author{display:block;width:fit-content;margin-top:4px;color:var(--calm-blue);font:500 10px/1.3 var(--mono);text-decoration:none;transition:color .18s}
+.article-heading .article-author:hover,.article-heading .article-author:focus-visible{color:#000}
+.sidebar-block:not(.is-featured) .sidebar-kicker,.sidebar-block small{color:var(--muted)}
+.sidebar-block.is-featured p{color:var(--ink)}
+.mobile-contents{display:none;margin:0 0 19px}
+@media(max-width:680px){
+ .mobile-contents{display:block}
+ .cover-contents .article-contents{display:none}
+}
+
+/* Related articles use the same edge-to-edge photo construction as the cover. */
+.related-material{padding:0;overflow:hidden}
+.related-material-cover{display:block;text-decoration:none}
+.related-material-cover img{display:block;width:100%;height:auto}
+.related-material-text{padding:16px 16px 18px}
+
+/* article-samples.css */
+.article-body .article-figure{margin:24px 0;max-width:100%}
+.article-figure .open-photo{display:block}
+.article-figure img{display:block;width:100%;height:auto;max-width:100%}
+.article-body .article-figure figcaption{margin:8px 0 0;font:italic 13px/1.4 var(--mono);color:var(--muted);text-align:center}
+.photo-series{display:block;margin:24px 0}
+.article-body .photo-series .article-figure{margin:0 0 15px}
+.article-quote{margin:19px 0;padding:0 0 0 14px;border-left:1px solid var(--line);color:var(--muted);font:italic 17px/1.3 Arial,sans-serif}
+.article-body a:not(.open-photo){text-underline-offset:3px}
+@media(max-width:680px){.photo-series{gap:10px}.article-quote{font-size:16px}}
+
+/* photo-layouts.css */
+.photo-series.photo-packed{display:block;position:relative}
+.photo-series{display:block;scroll-margin-top:270px}
+.photo-series.photo-packed .article-figure{position:absolute}
+body[data-photo-layout="ribbon"] .photo-series{display:block}
+.article-body .photo-series .article-figure{margin:0 0 15px}
+body[data-photo-layout="ribbon"] .photo-series .article-figure{margin:0 0 15px}
+.photo-dialog{padding:0;border:0;border-radius:0;max-width:none;max-height:none;overflow:visible;background:transparent;color:var(--ink)}
+.photo-dialog::backdrop{background:rgba(0,0,0,.86)}
+.photo-dialog>img{display:block;width:100%;height:100%;max-width:none;max-height:none;margin:0;object-fit:contain;touch-action:pan-y}
+.photo-dialog .photo-controls{position:absolute;top:8px;right:8px;display:flex;gap:6px;align-items:center;margin:0}
+.photo-dialog .photo-controls button{display:grid;place-items:center;width:32px;height:32px;min-height:0;padding:7px;border:1px solid var(--ink);border-radius:50%;background:var(--yellow);color:var(--ink);cursor:pointer}
+.photo-dialog .photo-controls button[hidden]{display:none}
+.photo-dialog .photo-controls svg{display:block;width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.photo-dialog .photo-controls button:hover{background:var(--calm-blue)}
+.photo-dialog .photo-controls button:focus-visible{outline:2px solid white;outline-offset:2px}
+</style>
+<meta name="author" content="Денис Гардари">
+<link rel="canonical" href="https://dgardari-ai.github.io/gardari-blog-preview/"><meta property="og:type" content="website"><meta property="og:title" content="Блог Гардари"><meta property="og:url" content="https://dgardari-ai.github.io/gardari-blog-preview/"><meta property="og:image" content="https://static.tildacdn.com/tild3666-6265-4566-a565-653831356639/022.jpeg"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Блог Гардари", "url": "https://dgardari-ai.github.io/gardari-blog-preview/", "mainEntity": {"@type": "BlogPosting", "@id": "https://dgardari-ai.github.io/gardari-blog-preview/articles/kak-smotret-kartiny.html", "headline": "КАК ПРАВИЛЬНО СМОТРЕТЬ КАРТИНЫ?", "datePublished": "2023-05-30T18:22:00+05:00", "author": {"@type": "Person", "name": "Денис Гардари", "url": "https://gardari.art/obo-mne"}}}</script></head>
 <body>
   <div class="page-shell" id="top">
     <div class="header-sticky">
@@ -52,9 +135,9 @@
                 <time class="date-ticker" datetime="2023-05-30" aria-label="30.05.2023"><span data-count-to="30" data-digits="2" aria-hidden="true">30</span><span class="ticker-dot" aria-hidden="true">.</span><span data-count-to="5" data-digits="2" aria-hidden="true">05</span><span class="ticker-dot" aria-hidden="true">.</span><span data-count-to="2023" data-digits="4" aria-hidden="true">2023</span></time>
               </div>
               <div class="article-meta"><span>ЗАНИМАТЕЛЬНАЯ КУЛЬТУРОЛОГИЯ</span></div>
-              <h1>КАК ПРАВИЛЬНО<br>СМОТРЕТЬ КАРТИНЫ?</h1>
+              <h1>КАК ПРАВИЛЬНО<br>СМОТРЕТЬ КАРТИНЫ?</h1><a class="article-author" rel="author" href="https://gardari.art/obo-mne">Денис Гардари</a>
             </div>
-            <div class="article-body">
+            <div class="context-before"><span>ДО ЭТОЙ СТАТЬИ</span><a href="https://gardari.art/article3/tpost/yocnsldan1-kak-pravilno-hodit-v-muzei">КАК ПРАВИЛЬНО ХОДИТЬ В МУЗЕИ?</a></div><div class="article-body">
             <p>Честно говоря, ещё более странная формулировка, чем про правильные музейные походы в прошлом посте. Хоть стоя на голове смотрите, если вам от этого хорошо . Но, все-таки, есть базовые правила, которые при разумном использовании могут стать основой вашего собственного метода!</p>
             <p>Жил 100-150 лет назад один крутой чувак, звали его Адольф Гильдебрандт, скульптор и теоретик, основоположник формализма в эстетике. Так вот он первый начал говорить про правильное зрение. В его трактовке — это восприятие, приведенное к спокойствию и порядку независимо от объективного содержания. Согласно Гильдебранду, можно «правильно» смотреть на вещь искусства, отбросив в сторону все вопросы об объективной истине как не имеющие отношения к искусству.</p>
             <p>Я надеюсь все мои читатели умные и вменяемые люди и понимают, что это определенное упрощение и понято должно быть в контексте рассуждений именно о СМОТРЕНИИ картины. «Правильно смотреть» — вовсе не гарантия глубокого вИдения, но как минимум, хорошее подспорье!</p>
@@ -66,18 +149,15 @@
 
         <div class="aside-dock">
           <aside class="links-column" aria-label="Дополнительные материалы" tabindex="0">
-          <section class="sidebar-block" id="topics">
-            <div class="sidebar-kicker">ПОДБОРКА МАТЕРИАЛОВ <span>01</span></div>
-            <div id="related-list"></div>
-          </section>
+          <section class="sidebar-block cover-contents a2"><a class="article-cover" href="https://static.tildacdn.com/tild3666-6265-4566-a565-653831356639/022.jpeg" aria-label="Открыть иллюстрацию целиком"><img src="https://static.tildacdn.com/tild3666-6265-4566-a565-653831356639/022.jpeg" width="780" height="780" alt="Посетители музея рассматривают большую картину." loading="eager"></a></section><section class="sidebar-block related-material" id="topics"><a class="related-material-cover" href="https://dgardari-ai.github.io/gardari-blog-preview/articles/ponimanie-sovremennogo-iskusstva.html" aria-label="Читать: ПОНИМАНИЕ СОВРЕМЕННОГО ИСКУССТВА"><img src="https://static.tildacdn.com/tild6366-3066-4136-b635-393866643265/024.jpeg" width="780" height="780" alt="Светлая скульптурная композиция из переплетённых фигур и предметов." loading="eager"></a><div class="related-material-text"><div class="sidebar-kicker">ПРОДОЛЖИТЬ ТЕМУ <span>02</span></div><a class="simple-link" href="https://dgardari-ai.github.io/gardari-blog-preview/articles/ponimanie-sovremennogo-iskusstva.html"><span>ПОНИМАНИЕ СОВРЕМЕННОГО ИСКУССТВА</span><small>От смотрения картины — к восприятию современного искусства.</small></a></div></section>
           <section class="sidebar-block" id="cycles">
-            <div class="sidebar-kicker">ЦИКЛЫ <span>02</span></div>
+            <div class="sidebar-kicker">ЦИКЛЫ <span>03</span></div>
             <a class="simple-link" href="https://gardari.art/article4/tpost/i8a9zp1gg1-konturi-buduschego-1-prishlo-drugoe-vrem" target="_blank" rel="noopener noreferrer"><span>КОНТУРЫ БУДУЩЕГО</span><small>4 ОЧЕРКА</small></a>
             <a class="simple-link" href="https://gardari.art/article3/tpost/xnxaux4eg1-russkii-kulturnii-kod-ocherk-n1" target="_blank" rel="noopener noreferrer"><span>РУССКИЙ КУЛЬТУРНЫЙ КОД</span><small>5 ОЧЕРКОВ</small></a>
             <a class="simple-link" href="https://gardari.art/article2/tpost/7ajorvb8k1-chto-est-tvorchestvo" target="_blank" rel="noopener noreferrer"><span>БЕСЕДЫ О ТВОРЧЕСТВЕ</span><small>НАЧАТЬ С ПЕРВОЙ</small></a>
           </section>
           <section class="sidebar-block is-featured" id="club">
-            <div class="sidebar-kicker">КЛУБ <span>03</span></div>
+            <div class="sidebar-kicker">КЛУБ <span>04</span></div>
             <h2>КЛУБ<br>ГАРДАРИ</h2>
             <p>Лекции по истории искусства и теории культуры.</p>
             <a class="club-link" href="https://gardari.art/gardari_club" target="_blank" rel="noopener noreferrer">ПЕРЕЙТИ В КЛУБ</a>
@@ -96,74 +176,37 @@
           <nav class="footer-resource-nav" id="footer-resource-nav" aria-label="Другие ресурсы Гардари"></nav>
         </div>
 
-        <div class="reading-footer-accordion" id="reading-footer-accordion" aria-label="Навигация после статьи">
-          <section class="footer-fold is-open is-always-open">
-            <h3 class="footer-fold-heading" id="footer-heading-dates">ПО ДАТАМ</h3>
-            <div class="footer-fold-panel" id="footer-panel-dates" role="region" aria-labelledby="footer-heading-dates">
-              <div class="footer-fold-inner">
-                <div class="footer-date-record">
-                  <span class="footer-record-label">ПРЕДЫДУЩАЯ ДАТА В ПОДБОРКЕ</span>
-                  <a class="footer-date" href="https://gardari.art/article5/tpost/rnraiinl31-radi-dozhdya" target="_blank" rel="noopener noreferrer"><time datetime="2023-04-19">19.04.2023</time></a>
-                  <span class="footer-date-separator" aria-hidden="true"> / </span>
-                  <a class="footer-record-title" href="https://gardari.art/article5/tpost/rnraiinl31-radi-dozhdya" target="_blank" rel="noopener noreferrer">РАДИ ДОЖДЯ</a>
-                </div>
-                <div class="footer-date-record">
-                  <span class="footer-record-label">СЛУЧАЙНАЯ ДАТА В ПОДБОРКЕ</span>
-                  <a class="footer-date" id="footer-random-date" href="https://gardari.art/article3/tpost/yocnsldan1-kak-pravilno-hodit-v-muzei" target="_blank" rel="noopener noreferrer"><time datetime="2023-05-30">30.05.2023</time></a>
-                  <span class="footer-date-separator" aria-hidden="true"> / </span>
-                  <a class="footer-record-title" id="footer-random-title" href="https://gardari.art/article3/tpost/yocnsldan1-kak-pravilno-hodit-v-muzei" target="_blank" rel="noopener noreferrer">КАК ПРАВИЛЬНО ХОДИТЬ В МУЗЕИ?</a>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="footer-fold">
-            <h3><button class="footer-fold-trigger" id="footer-trigger-related" type="button" aria-expanded="false" aria-controls="footer-panel-related"><span>ПО СМЫСЛУ</span><span class="footer-fold-mark" aria-hidden="true">+</span></button></h3>
-            <div class="footer-fold-panel" id="footer-panel-related" role="region" aria-labelledby="footer-trigger-related" aria-hidden="true" inert>
-              <div class="footer-fold-inner">
-                <div class="footer-date-record">
-                  <a class="footer-date" href="https://gardari.art/article3/tpost/yocnsldan1-kak-pravilno-hodit-v-muzei" target="_blank" rel="noopener noreferrer"><time datetime="2023-05-30">30.05.2023</time></a>
-                  <span class="footer-date-separator" aria-hidden="true"> / </span>
-                  <a class="footer-record-title" href="https://gardari.art/article3/tpost/yocnsldan1-kak-pravilno-hodit-v-muzei" target="_blank" rel="noopener noreferrer">КАК ПРАВИЛЬНО ХОДИТЬ В МУЗЕИ?</a>
-                </div>
-                <div class="footer-date-record">
-                  <a class="footer-date" href="https://gardari.art/article3/tpost/aoxeinend1-ponimanie-sovremennogo-iskusstva" target="_blank" rel="noopener noreferrer"><time datetime="2023-05-30">30.05.2023</time></a>
-                  <span class="footer-date-separator" aria-hidden="true"> / </span>
-                  <a class="footer-record-title" href="https://gardari.art/article3/tpost/aoxeinend1-ponimanie-sovremennogo-iskusstva" target="_blank" rel="noopener noreferrer">ПОНИМАНИЕ СОВРЕМЕННОГО ИСКУССТВА</a>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="footer-fold">
-            <h3><button class="footer-fold-trigger" id="footer-trigger-topic" type="button" aria-expanded="false" aria-controls="footer-panel-topic"><span>В ЭТОЙ РУБРИКЕ</span><span class="footer-fold-mark" aria-hidden="true">+</span></button></h3>
-            <div class="footer-fold-panel" id="footer-panel-topic" role="region" aria-labelledby="footer-trigger-topic" aria-hidden="true" inert>
-              <div class="footer-fold-inner">
-                <div class="footer-date-record">
-                  <a class="footer-date" href="https://gardari.art/article3/tpost/xnxaux4eg1-russkii-kulturnii-kod-ocherk-n1" target="_blank" rel="noopener noreferrer"><time datetime="2023-04-14">14.04.2023</time></a>
-                  <span class="footer-date-separator" aria-hidden="true"> / </span>
-                  <a class="footer-record-title" href="https://gardari.art/article3/tpost/xnxaux4eg1-russkii-kulturnii-kod-ocherk-n1" target="_blank" rel="noopener noreferrer">РУССКИЙ КУЛЬТУРНЫЙ КОД</a>
-                </div>
-                <div class="footer-date-record">
-                  <a class="footer-date" href="https://gardari.art/article3/tpost/aoxeinend1-ponimanie-sovremennogo-iskusstva" target="_blank" rel="noopener noreferrer"><time datetime="2023-05-30">30.05.2023</time></a>
-                  <span class="footer-date-separator" aria-hidden="true"> / </span>
-                  <a class="footer-record-title" href="https://gardari.art/article3/tpost/aoxeinend1-ponimanie-sovremennogo-iskusstva" target="_blank" rel="noopener noreferrer">ПОНИМАНИЕ СОВРЕМЕННОГО ИСКУССТВА</a>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="footer-fold">
+        <div class="reading-footer-accordion" id="reading-footer-accordion" aria-label="Навигация после статьи"><section class="footer-fold is-open is-always-open"><h3 class="footer-fold-heading">ПО СМЫСЛУ</h3><div class="footer-fold-panel" id="footer-panel-related"><div class="footer-fold-inner"><div class="footer-date-record"><a class="footer-date" href="https://dgardari-ai.github.io/gardari-blog-preview/articles/ponimanie-sovremennogo-iskusstva.html"><time datetime="2023-05-30">30.05.2023</time></a><span class="footer-date-separator" aria-hidden="true"> / </span><a class="footer-record-title" href="https://dgardari-ai.github.io/gardari-blog-preview/articles/ponimanie-sovremennogo-iskusstva.html">ПОНИМАНИЕ СОВРЕМЕННОГО ИСКУССТВА</a></div><div class="footer-date-record"><a class="footer-date" href="https://dgardari-ai.github.io/gardari-blog-preview/articles/galereya-brera.html"><time datetime="2023-05-30">30.05.2023</time></a><span class="footer-date-separator" aria-hidden="true"> / </span><a class="footer-record-title" href="https://dgardari-ai.github.io/gardari-blog-preview/articles/galereya-brera.html">ГАЛЕРЕЯ БРЕРА</a></div><div class="footer-date-record"><a class="footer-date" href="https://dgardari-ai.github.io/gardari-blog-preview/articles/hundertwasser.html"><time datetime="2023-05-30">30.05.2023</time></a><span class="footer-date-separator" aria-hidden="true"> / </span><a class="footer-record-title" href="https://dgardari-ai.github.io/gardari-blog-preview/articles/hundertwasser.html">ФРИДЕНСРАЙХ ХУНДЕРТВАССЕР</a></div><div class="footer-date-record"><a class="footer-date" href="https://dgardari-ai.github.io/gardari-blog-preview/articles/7-sovetov-hudozhniku.html"><time datetime="2022-04-05">05.04.2022</time></a><span class="footer-date-separator" aria-hidden="true"> / </span><a class="footer-record-title" href="https://dgardari-ai.github.io/gardari-blog-preview/articles/7-sovetov-hudozhniku.html">7 СОВЕТОВ НАЧИНАЮЩЕМУ ХУДОЖНИКУ</a></div></div></div></section><section class="footer-fold"><h3><button class="footer-fold-trigger" id="footer-trigger-dates" type="button" aria-expanded="false" aria-controls="footer-panel-dates"><span>ПО ДАТАМ</span><span class="footer-fold-mark" aria-hidden="true">+</span></button></h3><div class="footer-fold-panel" id="footer-panel-dates" role="region" aria-labelledby="footer-trigger-dates" aria-hidden="true" inert><div class="footer-fold-inner"><div class="footer-date-record"><a class="footer-date" href="https://dgardari-ai.github.io/gardari-blog-preview/articles/pyat-urovney-ya.html"><time datetime="2024-03-31">31.03.2024</time></a><span class="footer-date-separator" aria-hidden="true"> / </span><a class="footer-record-title" href="https://dgardari-ai.github.io/gardari-blog-preview/articles/pyat-urovney-ya.html">ПЯТЬ УРОВНЕЙ «Я».</a></div><div class="footer-date-record"><a class="footer-date" href="https://dgardari-ai.github.io/gardari-blog-preview/articles/kak-smotret-kartiny.html"><time datetime="2023-05-30">30.05.2023</time></a><span class="footer-date-separator" aria-hidden="true"> / </span><a class="footer-record-title" href="https://dgardari-ai.github.io/gardari-blog-preview/articles/kak-smotret-kartiny.html">КАК ПРАВИЛЬНО СМОТРЕТЬ КАРТИНЫ?</a></div><div class="footer-date-record"><a class="footer-date" href="https://dgardari-ai.github.io/gardari-blog-preview/articles/galereya-brera.html"><time datetime="2023-05-30">30.05.2023</time></a><span class="footer-date-separator" aria-hidden="true"> / </span><a class="footer-record-title" href="https://dgardari-ai.github.io/gardari-blog-preview/articles/galereya-brera.html">ГАЛЕРЕЯ БРЕРА</a></div><div class="footer-date-record"><a class="footer-date" href="https://dgardari-ai.github.io/gardari-blog-preview/articles/hundertwasser.html"><time datetime="2023-05-30">30.05.2023</time></a><span class="footer-date-separator" aria-hidden="true"> / </span><a class="footer-record-title" href="https://dgardari-ai.github.io/gardari-blog-preview/articles/hundertwasser.html">ФРИДЕНСРАЙХ ХУНДЕРТВАССЕР</a></div><div class="footer-date-record"><a class="footer-date" href="https://dgardari-ai.github.io/gardari-blog-preview/articles/ponimanie-sovremennogo-iskusstva.html"><time datetime="2023-05-30">30.05.2023</time></a><span class="footer-date-separator" aria-hidden="true"> / </span><a class="footer-record-title" href="https://dgardari-ai.github.io/gardari-blog-preview/articles/ponimanie-sovremennogo-iskusstva.html">ПОНИМАНИЕ СОВРЕМЕННОГО ИСКУССТВА</a></div><div class="footer-date-record"><a class="footer-date" href="https://dgardari-ai.github.io/gardari-blog-preview/articles/7-sovetov-hudozhniku.html"><time datetime="2022-04-05">05.04.2022</time></a><span class="footer-date-separator" aria-hidden="true"> / </span><a class="footer-record-title" href="https://dgardari-ai.github.io/gardari-blog-preview/articles/7-sovetov-hudozhniku.html">7 СОВЕТОВ НАЧИНАЮЩЕМУ ХУДОЖНИКУ</a></div></div></div></section><section class="footer-fold"><h3><button class="footer-fold-trigger" id="footer-trigger-topic" type="button" aria-expanded="false" aria-controls="footer-panel-topic"><span>В ЭТОЙ РУБРИКЕ</span><span class="footer-fold-mark" aria-hidden="true">+</span></button></h3><div class="footer-fold-panel" id="footer-panel-topic" role="region" aria-labelledby="footer-trigger-topic" aria-hidden="true" inert><div class="footer-fold-inner"><div class="footer-date-record"><a class="footer-date" href="https://dgardari-ai.github.io/gardari-blog-preview/articles/ponimanie-sovremennogo-iskusstva.html"><time datetime="2023-05-30">30.05.2023</time></a><span class="footer-date-separator" aria-hidden="true"> / </span><a class="footer-record-title" href="https://dgardari-ai.github.io/gardari-blog-preview/articles/ponimanie-sovremennogo-iskusstva.html">ПОНИМАНИЕ СОВРЕМЕННОГО ИСКУССТВА</a></div></div></div></section><section class="footer-fold">
             <h3><button class="footer-fold-trigger" id="footer-trigger-info" type="button" aria-expanded="false" aria-controls="footer-panel-info"><span>ИНФОРМАЦИЯ</span><span class="footer-fold-mark" aria-hidden="true">+</span></button></h3>
             <div class="footer-fold-panel" id="footer-panel-info" role="region" aria-labelledby="footer-trigger-info" aria-hidden="true" inert>
               <div class="footer-fold-inner footer-info-placeholder">
                 <p>ССЫЛКИ, ДОКУМЕНТЫ И ПОЛИТИКА САЙТА ПОЯВЯТСЯ ЗДЕСЬ.</p>
               </div>
             </div>
-          </section>
-        </div>
-      </footer>
+          </section></div>
+</footer>
     </main>
   </div>
+<script id="article-photo-viewer">(() => {
+ if(document.querySelector('.photo-dialog'))return;
+ const cover=document.querySelector('.article-cover'),body=[...document.querySelectorAll('.article-body .open-photo')];
+ let photos=[...body];
+ if(cover&&!cover.hasAttribute('data-photo-index'))photos.unshift(cover);
+ if(!photos.length)return;
+ const dialog=document.createElement('dialog');dialog.className='photo-dialog';dialog.setAttribute('aria-label','Просмотр фотографий статьи');
+ dialog.innerHTML='<img alt=""><div class="photo-controls"><button type="button" class="photo-previous" aria-label="Предыдущая фотография"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m12 4-6 6 6 6"/></svg></button><button type="button" class="photo-next" aria-label="Следующая фотография"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m8 4 6 6-6 6"/></svg></button><button type="button" class="photo-close" aria-label="Закрыть фотографию"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg></button></div><span class="visually-hidden photo-count" aria-live="polite"></span>';
+ document.body.append(dialog);
+ const img=dialog.querySelector('img'),previous=dialog.querySelector('.photo-previous'),next=dialog.querySelector('.photo-next'),close=dialog.querySelector('.photo-close');let index=0,origin,oldOverflow;
+ function fit(){const source=photos[index].querySelector('img');const w=Number(source.getAttribute('width'))||img.naturalWidth||780,h=Number(source.getAttribute('height'))||img.naturalHeight||780;const scale=Math.min(1,(innerWidth-32)/w,(innerHeight-32)/h);dialog.style.width=Math.max(1,w*scale)+'px';dialog.style.height=Math.max(1,h*scale)+'px';}
+ function show(i){index=Math.max(0,Math.min(photos.length-1,i));img.src=photos[index].href;img.alt=photos[index].querySelector('img').alt;previous.hidden=index===0;next.hidden=index===photos.length-1;dialog.querySelector('.photo-count').textContent=`Фотография ${index+1} из ${photos.length}`;fit();if(document.activeElement===previous&&previous.hidden)(next.hidden?close:next).focus();if(document.activeElement===next&&next.hidden)(previous.hidden?close:previous).focus();}
+ function open(a,i,e){e.preventDefault();origin=a;oldOverflow=document.body.style.overflow;document.body.style.overflow='hidden';show(i);dialog.showModal();close.focus();}
+ body.forEach(a=>a.addEventListener('click',e=>open(a,photos.indexOf(a),e)));
+ if(cover){cover.removeAttribute('target');cover.addEventListener('click',e=>open(cover,cover.hasAttribute('data-photo-index')?Number(cover.dataset.photoIndex):photos.indexOf(cover),e));}
+ previous.addEventListener('click',()=>show(index-1));next.addEventListener('click',()=>show(index+1));close.addEventListener('click',()=>dialog.close());dialog.addEventListener('close',()=>{document.body.style.overflow=oldOverflow;origin?.focus();});
+ dialog.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){e.preventDefault();show(index-1);}if(e.key==='ArrowRight'){e.preventDefault();show(index+1);}});
+ let touchX;img.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].clientX;},{passive:true});img.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-touchX;if(Math.abs(dx)>50)show(index+(dx<0?1:-1));},{passive:true});
+ addEventListener('resize',()=>{if(dialog.open)fit();});
+})();
+</script>
 </body>
 </html>
