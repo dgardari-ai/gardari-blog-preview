@@ -806,3 +806,74 @@ body[data-photo-layout="ribbon"] .photo-series .article-figure{margin:0 0 15px}
 .photo-dialog .photo-controls svg{display:block;width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .photo-dialog .photo-controls button:hover{background:var(--calm-blue)}
 .photo-dialog .photo-controls button:focus-visible{outline:2px solid white;outline-offset:2px}
+
+/* Promoted owner corrections, 04–05.11.2026. */
+/* Owner's 04.11 corrections. The original accepted components remain the base. */
+.article-meta{text-transform:uppercase}
+.article-body .article-figure img{width:min(100%,var(--image-natural-width,100%));max-width:100%;height:auto;aspect-ratio:var(--image-ratio,auto);margin-left:auto;margin-right:auto}
+.current-article-meta{padding:16px 16px 18px}
+.current-article-date{display:block;margin:0 0 8px;color:var(--calm-blue);font:500 11px/1.3 var(--mono)}
+.current-article-title{margin:0;color:var(--ink);font:900 20px/1.12 Arial,Helvetica,sans-serif;letter-spacing:-.02em;text-wrap:balance;text-transform:uppercase}
+.current-article-contents{margin-top:18px}
+.current-article-contents .sidebar-kicker{margin-bottom:10px}
+.current-article-contents .simple-link>span{font:400 15px/1.35 Arial,Helvetica,sans-serif;text-transform:none;letter-spacing:0}
+.current-article-contents .simple-link{padding:10px 0}
+.current-article-contents .simple-link:last-child{padding-bottom:0}
+.cover-contents.a2 .current-article-contents{margin:18px 0 0;padding:0}
+.cover-contents.a2 .photo-contents-meta .current-article-contents{margin-top:0}
+.current-article-card{padding:0;overflow:hidden}
+.artwork-gallery-reference{margin-top:8px!important;font:500 12px/1.4 var(--mono)!important;color:var(--calm-blue)}
+.artwork-gallery-reference a{text-decoration:underline;text-underline-offset:3px}
+.content-grid>.reading-footer{grid-column:1/-1;margin-top:24px}
+.content-grid>.aside-dock{align-self:stretch}
+.links-column{transition:none}
+.footer-record-label{flex-basis:100%;color:#b8bdc1;font:500 10px/1.4 var(--mono);text-transform:uppercase}
+.footer-date-record:has(.footer-record-label){flex-wrap:wrap;row-gap:3px}
+.footer-publication-info p{margin:0 0 8px;color:#b8bdc1;font:500 11px/1.45 var(--mono)}
+.footer-publication-info a{color:#f4f4f2;text-underline-offset:3px}
+/* Small blue labels need stronger contrast than the large date numerals. */
+.article-heading .article-author,.current-article-date,.artwork-gallery-reference{color:#52748a}
+.footer-fold>summary{list-style:none;cursor:pointer}
+.footer-fold>summary::-webkit-details-marker{display:none}
+.footer-fold[open]>.footer-fold-panel{grid-template-rows:1fr;opacity:1}
+.footer-fold[open] .footer-fold-inner{padding-bottom:18px}
+.footer-fold[open] .footer-fold-mark{background:var(--yellow);color:var(--ink);border-color:var(--ink)}
+.footer-fold[open]>summary .footer-fold-mark{font-size:0}
+.footer-fold[open]>summary .footer-fold-mark:after{content:'−';font-size:17px;line-height:1}
+@media(max-width:680px){.mobile-contents .current-article-meta{padding:16px}.gallery-promotion h2{font-size:25px}}
+/* 57px search + 13px gap + 61px navigation + 24px sleeve + 14px reading gap. */
+@media(max-width:680px){.main-article h2,.main-article .explanation h3,.photo-series{scroll-margin-top:169px}}
+
+/* Accepted resource banners. */
+/* Local candidates only. All geometry outside these two resources is inherited. */
+.resource-promo{padding:0;overflow:hidden;background:var(--sidebar-info-bg)}
+.resource-promo .promo-copy{padding:16px 16px 18px}
+.resource-promo .promo-kicker{display:flex;justify-content:space-between;gap:8px;margin:0 0 18px;font:500 9px/1.3 var(--mono);color:var(--muted)}
+.resource-promo h2{margin:0 0 14px;font:900 27px/.99 Arial,Helvetica,sans-serif;letter-spacing:-.025em;text-wrap:balance}
+.resource-promo p{margin:0 0 18px;font:15px/1.35 Arial,Helvetica,sans-serif;color:var(--ink);text-wrap:pretty}
+.promo-action{display:inline-flex;min-height:38px;padding:9px 14px;align-items:center;justify-content:center;gap:12px;border:1px solid var(--ink);border-radius:999px;background:#fff;text-decoration:none;font:600 10px/1.3 var(--mono);transition:background .15s,color .15s}
+.promo-action:hover,.promo-action:focus-visible{background:var(--ink);color:#fff}
+.resource-promo a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.promo-work{display:block;margin:0 0 18px;font:500 11px/1.4 var(--mono);color:#52748a;text-decoration:underline;text-underline-offset:3px}
+.promo-image{display:block;overflow:hidden}
+.promo-image img{display:block;width:100%;height:auto}
+.promo-arrow{display:none}
+/* Shared square image and copy geometry. */
+.promo-b{background:#fff}
+.promo-b .promo-copy{padding:12px}
+.promo-b h2{margin:0 0 8px;font-size:23px;line-height:1.05;white-space:nowrap;letter-spacing:-.025em}
+.promo-b p{margin:0 0 10px;font:500 11px/1.2 var(--mono);text-wrap:pretty}
+.promo-b .promo-image{aspect-ratio:1}
+.promo-b .promo-image img{width:100%;height:100%;object-fit:cover;object-position:center}
+.promo-b .promo-action{display:flex;width:100%;min-height:34px;padding:7px 12px}
+.promo-b.promo-club .promo-copy{background:var(--yellow)}
+/* Accepted base: white title on the square photo; yellow description/action area. */
+.promo-d{--banner-title-size:20.8px}
+.promo-d .promo-image{position:relative}
+.promo-d .promo-image::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.78) 0%,rgba(0,0,0,.38) 26%,transparent 55%);pointer-events:none}
+.promo-d .promo-image h2{position:absolute;z-index:1;left:6px;right:6px;bottom:14px;margin:0;color:#fff;font-size:var(--banner-title-size);line-height:1.05;text-align:center;white-space:normal;text-wrap:balance}
+.promo-d .promo-copy{background:var(--yellow);text-align:center}
+.promo-d p{text-align:center;text-wrap:balance}
+.promo-d .promo-image:focus-visible{outline:2px solid #fff;outline-offset:-4px}
+
+@media(prefers-reduced-motion:reduce){.promo-action{transition:none}}

@@ -1,125 +1,27 @@
 /* Prototype corpus: every article, link and cover below comes from gardari.art.
    The complete 182-text archive is intentionally not claimed as connected yet. */
-const articles = [
-  {
-    title: 'ЧТО ЕСТЬ ТВОРЧЕСТВО?',
-    short: 'ЧТО ЕСТЬ ТВОРЧЕСТВО?',
-    topic: 'ТЕОРИЯ ТВОРЧЕСКОЙ ДЕЯТЕЛЬНОСТИ',
-    detail: 'Цикл бесед о творчестве. Беседа первая.',
-    image: 'https://static.tildacdn.com/tild6564-3166-4162-a365-623231386134/021.jpeg',
-    url: 'https://gardari.art/article2/tpost/7ajorvb8k1-chto-est-tvorchestvo'
-  },
-  {
-    title: 'ПЯТЬ УРОВНЕЙ «Я»',
-    short: 'ПЯТЬ УРОВНЕЙ «Я»',
-    topic: 'ЗАНИМАТЕЛЬНАЯ ФИЛОСОФИЯ',
-    detail: 'Модель пяти уровней становления мировоззрения.',
-    image: 'https://static.tildacdn.com/tild6637-3230-4332-a362-353137646137/DSC_3752.jpeg',
-    url: 'https://gardari.art/article4/tpost/ual45f65c1-pyat-urovnei-ya'
-  },
-  {
-    title: 'РУССКИЙ КУЛЬТУРНЫЙ КОД',
-    short: 'РУССКИЙ КУЛЬТУРНЫЙ КОД',
-    topic: 'ЗАНИМАТЕЛЬНАЯ КУЛЬТУРОЛОГИЯ',
-    detail: 'Очерк № 1. Проблемы нашей идентичности.',
-    image: 'https://static.tildacdn.com/tild6534-6665-4939-b961-343762383766/026.jpeg',
-    url: 'https://gardari.art/article3/tpost/xnxaux4eg1-russkii-kulturnii-kod-ocherk-n1'
-  },
-  {
-    title: 'ПЛАСТИКА МИКЕЛАНДЖЕЛО',
-    short: 'ПЛАСТИКА МИКЕЛАНДЖЕЛО',
-    topic: 'ОЧЕРКИ ОБ ИСКУССТВЕ',
-    detail: 'Искусство и художники.',
-    image: 'https://static.tildacdn.com/tild3936-3931-4633-a235-393866656638/021.jpeg',
-    url: 'https://gardari.art/gardari_club/tpost/6fefvusvr1-plastika-mikelandzhelo'
-  },
-  {
-    title: 'РАДИ ДОЖДЯ',
-    short: 'РАДИ ДОЖДЯ',
-    topic: 'ИСТОРИИ ИЗ ЖИЗНИ',
-    detail: 'История Дениса Гардари.',
-    image: 'https://static.tildacdn.com/tild6131-6439-4565-b432-303764626331/021.jpeg',
-    url: 'https://gardari.art/article5/tpost/rnraiinl31-radi-dozhdya'
-  },
-  {
-    title: 'КОНТУРЫ БУДУЩЕГО',
-    short: 'КОНТУРЫ БУДУЩЕГО',
-    topic: 'ЗАНИМАТЕЛЬНАЯ ФИЛОСОФИЯ',
-    detail: 'Что же всё-таки нас ждёт, какой образ мира брезжит на горизонте?',
-    image: 'https://static.tildacdn.com/tild3562-3430-4337-b531-363331643262/Snapseed_3.jpg',
-    url: 'https://gardari.art/article4/tpost/i8a9zp1gg1-konturi-buduschego-1-prishlo-drugoe-vrem'
-  },
-  {
-    title: 'КАК ПРАВИЛЬНО СМОТРЕТЬ КАРТИНЫ?',
-    short: 'КАК ПРАВИЛЬНО СМОТРЕТЬ КАРТИНЫ?',
-    topic: 'ЗАНИМАТЕЛЬНАЯ КУЛЬТУРОЛОГИЯ',
-    detail: 'О способах смотрения искусства и правильном зрении.',
-    image: 'https://static.tildacdn.com/tild3666-6265-4566-a565-653831356639/022.jpeg',
-    url: 'https://gardari.art/article3/tpost/xv3yfx46b1-kak-pravilno-smotret-kartini'
-  },
-  {
-    title: 'КАК ПРАВИЛЬНО ХОДИТЬ В МУЗЕИ?',
-    short: 'КАК ПРАВИЛЬНО ХОДИТЬ В МУЗЕИ?',
-    topic: 'ЗАНИМАТЕЛЬНАЯ КУЛЬТУРОЛОГИЯ',
-    detail: '',
-    image: 'https://static.tildacdn.com/tild6163-3865-4836-b737-336635643666/021.jpeg',
-    url: 'https://gardari.art/article3/tpost/yocnsldan1-kak-pravilno-hodit-v-muzei'
-  },
-  {
-    title: 'ПОНИМАНИЕ СОВРЕМЕННОГО ИСКУССТВА',
-    short: 'ПОНИМАНИЕ СОВРЕМЕННОГО ИСКУССТВА',
-    topic: 'ЗАНИМАТЕЛЬНАЯ КУЛЬТУРОЛОГИЯ',
-    detail: '',
-    image: null,
-    url: 'https://gardari.art/article3/tpost/aoxeinend1-ponimanie-sovremennogo-iskusstva'
-  }
-];
+const articles = [{"postId": "blog-cc78fdddae9c19ac", "title": "КАК ПРАВИЛЬНО СМОТРЕТЬ КАРТИНЫ?", "short": "КАК ПРАВИЛЬНО СМОТРЕТЬ КАРТИНЫ?", "topic": "Теория и философия искусства / Выставки и художественная среда", "detail": "Денис Гардари об иммерсивном смотрении картины: расстояние, детали, композиция и периферийное зрение.", "image": "assets/paintings.jpg", "url": "kak-smotret-kartiny.html"}, {"postId": "blog-03589706ef46769d", "title": "ПЯТЬ УРОВНЕЙ «Я».", "short": "ПЯТЬ УРОВНЕЙ «Я».", "topic": "Человек, культура, общество / Мышление, познание, когнитивность", "detail": "Размышления Дениса Гардари об ответственности, поиске своего дела и становлении мировоззрения. Авторская модель пяти уровней «Я».", "image": "assets/levels.jpg", "url": "pyat-urovney-ya.html"}, {"postId": "blog-6ab9b0a853909785", "title": "ГАЛЕРЕЯ БРЕРА", "short": "ГАЛЕРЕЯ БРЕРА", "topic": "Заметки и истории о художниках", "detail": "Фотозаметки Дениса Гардари из миланской Галереи Брера: восемь фотографий искусства предвозрождения.", "image": "assets/article-tests/g77pn30lp1/00.jpg", "url": "galereya-brera.html"}, {"postId": "blog-4c951a5900931ced", "title": "ФРИДЕНСРАЙХ ХУНДЕРТВАССЕР", "short": "ФРИДЕНСРАЙХ ХУНДЕРТВАССЕР", "topic": "Заметки и истории о художниках", "detail": "Денис Гардари о свободе, живописи и архитектуре Фриденсрайха Хундертвассера. Очерк с десятью фотографиями.", "image": "assets/article-tests/k9lua9c1b1/00.jpg", "url": "hundertwasser.html"}, {"postId": "blog-78f5df1a9f291521", "title": "ПОНИМАНИЕ СОВРЕМЕННОГО ИСКУССТВА", "short": "ПОНИМАНИЕ СОВРЕМЕННОГО ИСКУССТВА", "topic": "Теория и философия искусства", "detail": "Как смотреть на современное искусство без предубеждения: живое восприятие, ресентимент и уважение к непонятности. Разбор Дениса Гардари.", "image": "assets/article-tests/aoxeinend1/00.jpg", "url": "ponimanie-sovremennogo-iskusstva.html"}, {"postId": "blog-157d35351796cde6", "title": "7 СОВЕТОВ НАЧИНАЮЩЕМУ ХУДОЖНИКУ", "short": "7 СОВЕТОВ НАЧИНАЮЩЕМУ ХУДОЖНИКУ", "topic": "Творчество, креативность и практика", "detail": "Денис Гардари о начале творческого пути: самостоятельность, учёба, материалы и отношение к советам мастеров.", "image": "assets/article-tests/ts6i2oxbk1/00.jpg", "url": "7-sovetov-hudozhniku.html"}, {"postId": "blog-72d45b926e15ffc6", "title": "МЫШЛЕНИЕ ВО МНОЖЕСТВЕННОМ ЧИСЛЕ", "short": "МЫШЛЕНИЕ ВО МНОЖЕСТВЕННОМ ЧИСЛЕ", "topic": "Мышление, познание, когнитивность", "detail": "Денис Гардари о шести исторических формах мышления: их сосуществовании, разных основаниях достоверности и вопросах, которые обостряет искусственный интеллект.", "image": null, "url": "blog-72d45b926e15ffc6.html"}, {"postId": "blog-a0af7ebf813d25e9", "title": "ПРАВДА, ВОЛЯ И АВОСЬ", "short": "ПРАВДА, ВОЛЯ И АВОСЬ", "topic": "Человек, культура, общество", "detail": "Авторская философско-поэтическая модель Дениса Гардари: правда, воля и авось как многозначные мотивы русской культуры и личного выбора.", "image": null, "url": "blog-a0af7ebf813d25e9.html"}, {"postId": "blog-f0d2d046cd0930e2", "title": "10 СОВЕТОВ по «вхождению» в мир искусства.", "short": "10 СОВЕТОВ по «вхождению» в мир искусства.", "topic": "Творчество, креативность и практика / Теория и философия искусства", "detail": "Десять советов Дениса Гардари для знакомства с искусством: насмотренность, открытость новому, собственная точка входа, общение и практика посещения музеев.", "image": null, "url": "10-cd0930e2.html"}, {"postId": "blog-1e9918a62febdd37", "title": "ИСТОКИ ВООБРАЖЕНИЯ", "short": "ИСТОКИ ВООБРАЖЕНИЯ", "topic": "Человек, культура, общество / Мышление, познание, когнитивность", "detail": "Авторское эссе Дениса Гардари о воображении, реальности и мифе: кружок Эранос, Жильбер Дюран и разные способы понимать мир через искусство.", "image": "assets/first-stage/0a746dd55f6e121c2dc4a0653e9a4bc124fadb9ef3c0a326712ca707a668b44d.jpg", "url": "blog-1e9918a62febdd37.html"}, {"postId": "blog-54a72611590df765", "title": "МИР МЕНЯЕТСЯ. А ЧЕЛОВЕК?", "short": "МИР МЕНЯЕТСЯ. А ЧЕЛОВЕК?", "topic": "Человек, культура, общество / Искусственный интеллект, ai, нейросети", "detail": "Денис Гардари размышляет об ожиданиях от ИИ, исследованиях Anthropic и собственном опыте: как новые возможности меняют деятельность и самого человека.", "image": "assets/first-stage/d8295a0b83d7be59c93354ef3aa6238356c8c63af51b3a58a3f59c7cf20d01f1.png", "url": "blog-54a72611590df765.html"}, {"postId": "blog-c4386885939d3e26", "title": "ВОСПРИЯТИЕ ИСКУССТВА", "short": "ВОСПРИЯТИЕ ИСКУССТВА", "topic": "Теория и философия искусства", "detail": "Денис Гардари рассматривает восприятие искусства как переживаемый опыт: габитус, изменение картины мира и возможность выйти за пределы привычного понимания.", "image": "assets/first-stage/e68dc5aedb523b6895877c5359dd6f70f9b636ff1e7abd2335c18ca07a535efd.jpg", "url": "blog-c4386885939d3e26.html"}, {"postId": "blog-8288aa0358c39fe4", "title": "ЗООПАРК. СЕРИЯ «ДЕТСКАЯ»", "short": "ЗООПАРК. СЕРИЯ «ДЕТСКАЯ»", "topic": "Арт-галерея Гардари", "detail": "«Зоопарк» Дениса Гардари из серии «Детская»: композиция из художественного стекла, 30 × 30 см. Общий вид работы и описание техники фьюзинга.", "image": "assets/first-stage/17744fd42394a0b1e7191f7303be0ac76039b0586fdc4d63080775ba038a23f7.jpg", "url": "blog-8288aa0358c39fe4.html"}, {"postId": "blog-d56165b371d16d81", "title": "БАЛАНС ПОВЕДЕНИЯ", "short": "БАЛАНС ПОВЕДЕНИЯ", "topic": "Человек, культура, общество", "detail": "«Баланс поведения» — авторская модель Дениса Гардари: статус, польза и потенциал в отношениях, когнитивные искажения и различие прагматики и этики.", "image": "assets/first-stage/c3be59e3baa4f93c8f3a8349d5ab4b2c6434475e37aec7813819ea95469bb5f3.jpg", "url": "blog-d56165b371d16d81.html"}, {"postId": "blog-938182e0bc3bfde2", "title": "ЧТО ТАКОЕ КУЛЬТУРНЫЙ КАПИТАЛ?", "short": "ЧТО ТАКОЕ КУЛЬТУРНЫЙ КАПИТАЛ?", "topic": "Человек, культура, общество / Мышление, познание, когнитивность", "detail": "Денис Гардари о культурном капитале и габитусе в теории Пьера Бурдьё: образовании, искусстве, творчестве и их роли в изменении человеческих возможностей.", "image": "assets/first-stage/b4a0a76ae778a7bef5bc2664a40b1de5335210cffa61bf1ed05e6629158ee17d.jpg", "url": "blog-938182e0bc3bfde2.html"}, {"postId": "blog-e76a689711b388b7", "title": "РУССКИЙ АВАНГАРД. Очерк N4. КРИЗИС БЕЗОБРАЗИЯ.", "short": "РУССКИЙ АВАНГАРД. Очерк N4. КРИЗИС БЕЗОБРАЗИЯ.", "topic": "Заметки и истории о художниках / Теория и философия искусства", "detail": "Четвёртый очерк Дениса Гардари о русском авангарде: Михаил Лифшиц, «Кризис безобразия» и вопрос об ответственности художественного новаторства.", "image": "assets/first-stage/e33ce8e85e67b130d99bbb5294d2c668c46e4449a953b1f12b5166ab2fe8e132.jpg", "url": "n4-11b388b7.html"}, {"postId": "blog-f012b691a4774ac2", "title": "Русский авангард. Очерк №5. Ларионов и Гончарова", "short": "Русский авангард. Очерк №5. Ларионов и Гончарова", "topic": "Заметки и истории о художниках", "detail": "Пятый очерк Дениса Гардари о русском авангарде: Михаил Ларионов и Наталья Гончарова, их творческий союз, живопись и работа для театра. Две части очерка.", "image": "assets/first-stage/a2e2d3b05605872d04d3a38ca781cb8682cf59be7cd111b7d9e81c69a13bed49.jpg", "url": "5-a4774ac2.html"}, {"postId": "blog-b2abaaf68714b4db", "title": "Знакомство с Рустамом Хамдамовым", "short": "Знакомство с Рустамом Хамдамовым", "topic": "Человек, культура, общество", "detail": "Денис Гардари знакомит с Рустамом Хамдамовым — режиссёром и художником. Личные впечатления, рассказ о творческой судьбе и иллюстрации.", "image": "assets/first-stage/5c3dc863bfada31db7f29e809cfa4c613cade8f8de0da9b4667177f74337b265.jpg", "url": "blog-b2abaaf68714b4db.html"}, {"postId": "blog-e6243a6226849461", "title": "ДЖОРДЖИО ДЕ КИРИКО", "short": "ДЖОРДЖИО ДЕ КИРИКО", "topic": "Заметки и истории о художниках", "detail": "Очерк Дениса Гардари о Джорджо де Кирико: метафизической живописи, переменах в творчестве и непростой судьбе художника. Иллюстрации и портреты.", "image": "assets/first-stage/d5775b3933496d144a788f41c2ecd8f72d12de0aeb4c6c3ad58751fdc2d71abc.jpg", "url": "blog-e6243a6226849461.html"}, {"postId": "blog-e923371bd24a9ea2", "title": "РИСУНКИ НИКОЛАЯ БЛОХИНА", "short": "РИСУНКИ НИКОЛАЯ БЛОХИНА", "topic": "Заметки и истории о художниках", "detail": "Денис Гардари о рисунках Николая Блохина, академической школе и свободе художественного языка. Подборка портретов, фигур и жанровых рисунков.", "image": "assets/first-stage/5c5072553ee1b34921547484e779857100fc160b9b863a570e841c9b2cb3aa36.jpg", "url": "blog-e923371bd24a9ea2.html"}, {"postId": "blog-6e55e83fcbb94c6f", "title": "Выставка Павла Пепперштейна в музее «Гараж»", "short": "Выставка Павла Пепперштейна в музее «Гараж»", "topic": "Выставки и художественная среда", "detail": "Фотозаметка Дениса Гардари с выставки Павла Пепперштейна в музее «Гараж»: экспозиция, графика и живописные работы.", "image": "assets/first-stage/a90e81acf98925f4fb727d4f6b29164a8e487e1704deb54f01131b038db3c09e.jpg", "url": "blog-6e55e83fcbb94c6f.html"}, {"postId": "blog-619593ad6b6e106d", "title": "Премьера оперы «Чёрный квадрат»", "short": "Премьера оперы «Чёрный квадрат»", "topic": "Выставки и художественная среда", "detail": "Фотозаметка Дениса Гардари с премьеры оперы «Чёрный квадрат»: сцена, участники и фрагменты представления.", "image": "assets/first-stage/314ef5e7a0e9871cd0059dba970c2157f83bed16bec84785b33dc55358f6c6ed.jpg", "url": "blog-619593ad6b6e106d.html"}, {"postId": "blog-a00f421f8344cae2", "title": "ВЛАДИМИР. УСПЕНСКИЙ СОБОР", "short": "ВЛАДИМИР. УСПЕНСКИЙ СОБОР", "topic": "Заметки и истории о художниках", "detail": "Фотозаметка Дениса Гардари об Успенском соборе во Владимире: общий вид, белокаменная архитектура и золотые купола.", "image": "assets/first-stage/3637546c7cb6b2b3252a2197c56430469ebe7165990173618023e0332d44f841.jpg", "url": "blog-a00f421f8344cae2.html"}, {"postId": "blog-0de8ab9b5d402e08", "title": "ВОЛХВ", "short": "ВОЛХВ", "topic": "Арт-галерея Гардари", "detail": "«Волхв» Дениса Гардари из серии «12 мудрецов»: уголь на холсте, 100 × 100 см. Общий вид произведения и переход в Галерею.", "image": "assets/first-stage/c231b55acab1e0707b69d2d469b57c7d3901927a882b8dd1e47562e9ece842ae.jpg", "url": "blog-0de8ab9b5d402e08.html"}, {"postId": "blog-58e20e68123752d6", "title": "РАЗУМ", "short": "РАЗУМ", "topic": "Человек, культура, общество / Мышление, познание, когнитивность / Творчество, креативность и практика / Арт-галерея Гардари", "detail": "«Разум» Дениса Гардари из серии «Эволюция»: произведение 2023 года, смешанная техника, 70 × 70 см. Авторское эссе, общий вид и детали.", "image": "assets/first-stage/4d78eb239f0f2a586bfda98fffd5f91f71ed38715b373920429143db6da94ea2.jpg", "url": "blog-58e20e68123752d6.html"}, {"postId": "blog-1418b050f3b9d8a4", "title": "ДЕТИ СОЛНЦА", "short": "ДЕТИ СОЛНЦА", "topic": "Арт-галерея Гардари", "detail": "«Дети солнца» Дениса Гардари из серии «Логос»: произведение 2021 года, смешанная техника, 160 × 90 см. Авторский текст, общий вид и фактурные детали.", "image": "assets/first-stage/5a06ae17fac93fe68ea6b54bce346cb3046d671e0673a2a64f1955203c1ce34f.jpg", "url": "blog-1418b050f3b9d8a4.html"}];
 
 /* WORKING_ARTICLE_INDEX_START */
-const workingArticles = [{"postId": "article-paintings", "title": "КАК ПРАВИЛЬНО СМОТРЕТЬ КАРТИНЫ?", "short": "КАК ПРАВИЛЬНО СМОТРЕТЬ КАРТИНЫ?", "topic": "ЗАНИМАТЕЛЬНАЯ КУЛЬТУРОЛОГИЯ", "detail": "Денис Гардари об иммерсивном смотрении картины: расстояние, детали, композиция и периферийное зрение.", "image": "https://static.tildacdn.com/tild3666-6265-4566-a565-653831356639/022.jpeg", "url": "kak-smotret-kartiny.html"}, {"postId": "article-levels", "title": "ПЯТЬ УРОВНЕЙ «Я».", "short": "ПЯТЬ УРОВНЕЙ «Я».", "topic": "ЗАНИМАТЕЛЬНАЯ ФИЛОСОФИЯ", "detail": "Размышления Дениса Гардари об ответственности, поиске своего дела и становлении мировоззрения. Авторская модель пяти уровней «Я».", "image": "https://static.tildacdn.com/tild6637-3230-4332-a362-353137646137/DSC_3752.jpeg", "url": "pyat-urovney-ya.html"}, {"postId": "sample-brera", "title": "ГАЛЕРЕЯ БРЕРА", "short": "ГАЛЕРЕЯ БРЕРА", "topic": "ОЧЕРКИ ОБ ИСКУССТВЕ И ХУДОЖНИКАХ", "detail": "Фотозаметки Дениса Гардари из миланской Галереи Брера: восемь фотографий искусства предвозрождения.", "image": "https://static.tildacdn.com/tild3266-3034-4161-a662-633330623233/021.jpeg", "url": "galereya-brera.html"}, {"postId": "sample-hundertwasser", "title": "ФРИДЕНСРАЙХ ХУНДЕРТВАССЕР", "short": "ФРИДЕНСРАЙХ ХУНДЕРТВАССЕР", "topic": "ОЧЕРКИ ОБ ИСКУССТВЕ И ХУДОЖНИКАХ", "detail": "Денис Гардари о свободе, живописи и архитектуре Фриденсрайха Хундертвассера. Очерк с десятью фотографиями.", "image": "https://static.tildacdn.com/tild3336-3835-4536-b334-623131363537/021.jpeg", "url": "hundertwasser.html"}, {"postId": "sample-modern-art", "title": "ПОНИМАНИЕ СОВРЕМЕННОГО ИСКУССТВА", "short": "ПОНИМАНИЕ СОВРЕМЕННОГО ИСКУССТВА", "topic": "ОЧЕРКИ ОБ ИСКУССТВЕ И ХУДОЖНИКАХ;ЗАНИМАТЕЛЬНАЯ КУЛЬТУРОЛОГИЯ", "detail": "Как смотреть на современное искусство без предубеждения: живое восприятие, ресентимент и уважение к непонятности. Разбор Дениса Гардари.", "image": "https://static.tildacdn.com/tild6366-3066-4136-b635-393866643265/024.jpeg", "url": "ponimanie-sovremennogo-iskusstva.html"}, {"postId": "sample-advice", "title": "7 СОВЕТОВ НАЧИНАЮЩЕМУ ХУДОЖНИКУ", "short": "7 СОВЕТОВ НАЧИНАЮЩЕМУ ХУДОЖНИКУ", "topic": "ОЧЕРКИ ОБ ИСКУССТВЕ И ХУДОЖНИКАХ;ЗАНИМАТЕЛЬНАЯ ФИЛОСОФИЯ", "detail": "Денис Гардари о начале творческого пути: самостоятельность, учёба, материалы и отношение к советам мастеров.", "image": "https://static.tildacdn.com/tild3530-6537-4133-a338-303238626434/023.jpeg", "url": "7-sovetov-hudozhniku.html"}];
+const workingArticles = [];
 workingArticles.forEach(item=>{const i=articles.findIndex(a=>a.postId===item.postId||a.url.includes(item.postId));if(i<0)articles.push(item);else articles.splice(i,1,item);});
 /* WORKING_ARTICLE_INDEX_END */
 const tabShape = 'M 46.79072656342929 0.5 H 66.666667 A 11.5 11.5 0 0 1 78.166667 12 V 66.666667 A 11.5 11.5 0 0 1 66.666667 78.166667 H 12 A 11.5 11.5 0 0 1 0.5 66.666667 V 46.79072656342929 A 11.5 11.5 0 0 1 12.767732953990608 35.316381871406264 A 21.181818156064274 21.181818156064274 0 0 0 35.316381871406264 12.767732953990608 A 11.5 11.5 0 0 1 46.79072656342929 0.5 Z';
 const escapeHtml = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 function buildNavigation() {
-  const items = [
-    {label:'Главная',href:'../index.html#top'},
-    {label:'Темы',href:'../index.html#topics'},
-    {label:'Циклы',href:'../index.html#cycles'},
-    {label:'Клуб',href:'#club'}
-  ];
-  const nav = document.getElementById('matrix-nav');
-  items.forEach((item,index)=>{
-    const link = document.createElement('a');
-    link.href = item.href;
-    link.className = 'section-tab';
-    link.setAttribute('aria-label',item.label);
-    link.innerHTML = '<svg class="tab-outline" viewBox="0 0 78.666667 78.666667" aria-hidden="true"><path d="' + tabShape + '"/></svg>'
-      + '<span class="tab-number">' + String(index+1).padStart(2,'0') + '</span>'
-      + '<span class="tab-name">' + escapeHtml(item.label) + '</span>';
-    nav.append(link);
-  });
-  const syncActive = () => {
-    const current = items.some(item=>item.href === location.hash) ? location.hash : '#top';
-    [...nav.querySelectorAll('.section-tab')].forEach(link=>{
-      const active = false;
-      link.classList.toggle('is-active',active);
-      if (active) link.setAttribute('aria-current','location');
-      else link.removeAttribute('aria-current');
-    });
-  };
-  window.addEventListener('hashchange',syncActive);
-  syncActive();
+ const items=[{label:'Главная',href:'../index.html#top'},{label:'Темы',href:'../topics/'},{label:'···',href:null},{label:'Клуб',href:'#club'}];
+ const nav=document.getElementById('matrix-nav');if(!nav||nav.childElementCount)return;
+ items.forEach((item,index)=>{const link=document.createElement(item.href?'a':'span');if(item.href)link.href=item.href;link.className='section-tab'+(item.href?'':' is-reserved');link.setAttribute('aria-label',item.href?item.label:'Другая страница, название пока не выбрано');link.innerHTML='<svg class="tab-outline" viewBox="0 0 78.666667 78.666667" aria-hidden="true"><path d="'+tabShape+'"/></svg><span class="tab-number">'+String(index+1).padStart(2,'0')+'</span><span class="tab-name">'+escapeHtml(item.label)+'</span>';nav.append(link);});
 }
 
 /* The footer shares the Gallery menu contour and disc-only hover response,
    but uses an outlined, transparent treatment on the graphite surface. */
 function buildFooterResources() {
   const nav = document.getElementById('footer-resource-nav');
-  if (!nav) return;
+  if (!nav || nav.childElementCount) return;
   const resources = [
-    { label:'Арт-галерея', lines:['АРТ','ГАЛЕРЕЯ'], href:'https://gardari.art/gallery' },
+    { label:'Арт-галерея', lines:['АРТ','ГАЛЕРЕЯ'], href:'https://dgardari-ai.github.io/gardari-gallery-preview/' },
     { label:'Концепт-бюро', lines:['КОНЦЕПТ','БЮРО'], href:'https://dgardari-ai.github.io/kb-gardari/' },
     { label:'Платформа методов', lines:['ПЛАТФОРМА','МЕТОДОВ'], href:'https://dgardari-ai.github.io/gardari-tools-platform/' },
     { label:'Клуб Гардари', lines:['КЛУБ','ГАРДАРИ'], href:'https://gardari.art/gardari_club' }
@@ -203,7 +105,7 @@ function initSearch() {
     const found=articles.filter(a=>normalize(a.title+' '+a.topic+' '+a.detail).includes(query));
     const label=document.createElement('div');
     label.className='search-results-label';
-    label.textContent='НАЙДЕНО: '+found.length+' · ПОИСК ПО '+articles.length+' МАТЕРИАЛАМ ПРОТОТИПА';
+    label.textContent='НАЙДЕНО: '+found.length+' · ПОИСК ПО '+articles.length+' МАТЕРИАЛАМ';
     list.append(label);
     if(found.length===0){
       const empty=document.createElement('p');
@@ -277,86 +179,49 @@ function initDateTicker() {
    silently release when the article's parent reaches its bottom edge. */
 function initAsideDock() {
   const dock = document.querySelector('.aside-dock');
-  const aside = dock?.querySelector('.links-column');
-  const footer = document.querySelector('.reading-footer');
-  if (!dock || !aside) return;
+  const aside = dock?.querySelector('.links-column') || document.querySelector('.links-column');
+  if (!aside) return;
   const mobile = window.matchMedia('(max-width: 680px)');
-  let queued = false;
   function update() {
-    queued = false;
-    if (mobile.matches) {
-      aside.classList.remove('is-docked');
-      aside.classList.remove('is-overflowing');
-      aside.classList.remove('is-footer-covered');
-      aside.inert = false;
-      aside.style.removeProperty('left');
-      aside.style.removeProperty('width');
-      dock.style.removeProperty('min-height');
-      return;
-    }
-    aside.classList.toggle('is-overflowing',aside.scrollHeight > aside.clientHeight + 1);
-    dock.style.minHeight = Math.ceil(aside.getBoundingClientRect().height) + 'px';
-    const rect = dock.getBoundingClientRect();
-    const shouldDock = rect.top <= 97;
-    aside.classList.toggle('is-docked',shouldDock);
-    /* The full-width reading footer takes over only after article reading ends.
-       Fade the dock instead of letting it slide beneath the fixed header. */
-    const footerTop = footer ? footer.getBoundingClientRect().top : Infinity;
-    const footerCovered = shouldDock && footerTop <= 97 + aside.getBoundingClientRect().height;
-    aside.classList.toggle('is-footer-covered',footerCovered);
-    aside.inert = footerCovered;
-    if (shouldDock) {
-      aside.style.left = rect.left.toFixed(2) + 'px';
-      aside.style.width = rect.width.toFixed(2) + 'px';
-    } else {
-      aside.style.removeProperty('left');
-      aside.style.removeProperty('width');
-    }
-  }
-  function schedule() {
-    if (queued) return;
-    queued = true;
-    requestAnimationFrame(update);
+    // CSS sticky is bounded by the reading row. Scrolling back restores it
+    // naturally; overflow belongs to the aside, not to the page scroll.
+    aside.classList.remove('is-docked', 'is-footer-covered');
+    aside.inert = false;
+    aside.style.removeProperty('left');
+    aside.style.removeProperty('width');
+    dock?.style.removeProperty('min-height');
+    aside.classList.toggle('is-overflowing', !mobile.matches && aside.scrollHeight > aside.clientHeight + 1);
   }
   update();
-  window.addEventListener('scroll',schedule,{passive:true});
-  window.addEventListener('resize',schedule);
+  new ResizeObserver(update).observe(aside);
+  window.addEventListener('resize', update);
 }
+
 
 function initReadingFooterAccordion() {
   const root = document.getElementById('reading-footer-accordion');
   if (!root) return;
-  /* The date selection stays visible even when the other folds change. */
-  const folds = [...root.querySelectorAll('.footer-fold:not(.is-always-open)')];
-  const triggers = folds.map(fold=>fold.querySelector('.footer-fold-trigger'));
-  function update(openFold) {
-    folds.forEach(fold=>{
-      const isOpen = fold === openFold;
-      const trigger = fold.querySelector('.footer-fold-trigger');
-      const panel = fold.querySelector('.footer-fold-panel');
-      fold.classList.toggle('is-open',isOpen);
-      trigger.setAttribute('aria-expanded',String(isOpen));
-      trigger.querySelector('.footer-fold-mark').textContent = isOpen ? '−' : '+';
-      panel.setAttribute('aria-hidden',String(!isOpen));
-      panel.inert = !isOpen;
+  const folds = [...root.querySelectorAll('details.footer-fold')];
+  const summaries = folds.map(fold => fold.querySelector('summary'));
+  folds.forEach((fold, index) => {
+    fold.addEventListener('toggle', () => {
+      fold.classList.toggle('is-open', fold.open);
+      fold.querySelector('.footer-fold-mark').textContent = fold.open ? '−' : '+';
+      if (fold.open) folds.forEach(other => { if (other !== fold) other.open = false; });
     });
-  }
-  folds.forEach((fold,index)=>{
-    const trigger = triggers[index];
-    trigger.addEventListener('click',()=>update(fold.classList.contains('is-open') ? null : fold));
-    trigger.addEventListener('keydown',event=>{
-      let nextIndex;
-      if (event.key === 'ArrowDown') nextIndex = (index+1)%triggers.length;
-      else if (event.key === 'ArrowUp') nextIndex = (index+triggers.length-1)%triggers.length;
-      else if (event.key === 'Home') nextIndex = 0;
-      else if (event.key === 'End') nextIndex = triggers.length-1;
+    summaries[index].addEventListener('keydown', event => {
+      let target;
+      if (event.key === 'ArrowDown') target = (index + 1) % summaries.length;
+      else if (event.key === 'ArrowUp') target = (index + summaries.length - 1) % summaries.length;
+      else if (event.key === 'Home') target = 0;
+      else if (event.key === 'End') target = summaries.length - 1;
       else return;
       event.preventDefault();
-      triggers[nextIndex].focus();
+      summaries[target].focus();
     });
   });
-  update(folds.find(fold=>fold.classList.contains('is-open')) || null);
 }
+
 
 function initRandomFooterDate() {
   const dateLink = document.getElementById('footer-random-date');
@@ -383,9 +248,9 @@ function initArticleShare() {
   const feedback = document.getElementById('share-feedback');
   if (!button || !feedback) return;
   button.addEventListener('click',async()=>{
-    const link = new URL(location.href);
+    const link = new URL(button.dataset.articleUrl || location.href, location.href);
     link.hash = '';
-    ['editor_view','verify','final','check'].forEach(key => link.searchParams.delete(key));
+    link.search = '';
     if (navigator.share) {
       try {
         await navigator.share({
@@ -423,6 +288,7 @@ function initArticleShare() {
     field.select();
   });
 }
+
 
 buildNavigation();
 buildFooterResources();
@@ -467,7 +333,7 @@ initBlogEntrance();
 function syncArticleContents() {
   let id;
   const sleeve = document.querySelector('.article-heading');
-  const threshold = matchMedia('(max-width: 680px)').matches ? 22 : Math.max(300, (sleeve?.getBoundingClientRect().bottom || 0) + 16) + 2;
+  const threshold = matchMedia('(max-width: 680px)').matches ? 171 : Math.max(300, (sleeve?.getBoundingClientRect().bottom || 0) + 16) + 2;
   document.querySelectorAll('.article-body h2[id]').forEach(h => {
     if (h.getBoundingClientRect().top <= threshold) id = h.id;
   });

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Темы — Блог Гардари</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="blog-base.css?v=4075e26ff06a">
+<link rel="stylesheet" href="topics.css?v=04a3ca8dd810">
+<script src="topics.js?v=a9ae3ddc846c" defer></script>
+<link rel="stylesheet" href="../articles/article.css?v=95882dc8038f"><script defer src="../articles/resource-banners.js?v=a16ebc00bc94"></script><style>.card-title a{text-decoration:none}.card-title a:hover{color:var(--calm-blue)}</style></head>
+<body>
+<a class="skip-link" href="#view">К содержанию</a>
+
+  <div class="page-shell" id="top">
+    <div class="header-sticky">
+      <header class="matrix-header">
+        <form class="search-rail" id="search-form" role="search" autocomplete="off">
+        <a class="brand-mark" href="../index.html" aria-label="Публикации и статьи — на главную">
+          <svg class="brand-pill-logo" viewBox="88 112 306 303" aria-hidden="true" focusable="false">
+            <image href="../assets/gallery-logo-original.png" width="490" height="490"></image>
+          </svg>
+          <span class="brand-fallback" aria-hidden="true">г</span>
+        </a>
+        <label class="visually-hidden" for="material-search">Поиск по статьям, категориям и циклам</label>
+        <input id="material-search" class="search-field" type="search" placeholder="БЛОГ ГАРДАРИ: ПОИСК ПО КАТЕГОРИЯМ И ЦИКЛАМ..." spellcheck="false" aria-controls="search-results" aria-expanded="false">
+        <button class="search-submit" type="submit" aria-label="Найти статью или тему">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.6" cy="10.6" r="6.7"/><path d="m16 16 5 5"/></svg>
+        </button>
+        <div class="search-results" id="search-results" role="region" aria-live="polite" aria-label="Найденные материалы" hidden></div>
+        </form>
+        <nav class="matrix-nav" id="matrix-nav" aria-label="Разделы Блога"></nav>
+      </header>
+    </div>
+
+
+<main class="content-grid topics-grid" id="topics-layout">
+ <div class="topics-primary" id="view" tabindex="-1"></div>
+ <div class="aside-dock"><aside class="links-column" id="topics-aside" aria-label="Навигация и дополнительные материалы" tabindex="0"></aside></div>
+</main>
+<footer class="reading-footer" id="after-article" aria-labelledby="reading-footer-title">
+        <div class="reading-footer-intro">
+          <span class="reading-footer-kicker">БЛОГ ДЕНИСА ГАРДАРИ</span>
+          <h2 id="reading-footer-title">ЧИТАТЬ<br>ДАЛЬШЕ</h2>
+          <div class="footer-share-actions">
+            <button class="share-article" type="button" id="share-article">ПОДЕЛИТЬСЯ БЛОГОМ</button>
+            <span class="share-feedback" id="share-feedback" role="status" aria-live="polite"></span>
+          </div>
+          <nav class="footer-resource-nav" id="footer-resource-nav" aria-label="Другие ресурсы Гардари"></nav>
+        </div>
+
+        <div class="reading-footer-accordion" id="reading-footer-accordion" aria-label="Навигация по блогу"></div>
+</footer>
+</div>
+<dialog class="demo-dialog" id="demo-dialog" aria-labelledby="demo-title">
+ <form method="dialog"><button class="dialog-close" aria-label="Закрыть карточку">×</button></form>
+ <h2 id="demo-title"></h2><p id="demo-description"></p>
+ <p class="demo-explanation">Текст статьи в этом макете не представлен.</p>
+ <button class="catalog-action" id="return-to-list">Вернуться к списку</button>
+</dialog>
+<div class="visually-hidden" id="route-status" role="status" aria-live="polite"></div>
+</body></html>
