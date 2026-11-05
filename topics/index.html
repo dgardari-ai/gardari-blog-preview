@@ -12,8 +12,8 @@
 <link rel="stylesheet" href="blog-base.css?v=4075e26ff06a">
 <link rel="stylesheet" href="topics.css?v=04a3ca8dd810">
 <script src="topics.js?v=a9ae3ddc846c" defer></script>
-<link rel="stylesheet" href="../articles/article.css?v=95882dc8038f"><script defer src="../articles/resource-banners.js?v=a16ebc00bc94"></script><style>.card-title a{text-decoration:none}.card-title a:hover{color:var(--calm-blue)}</style></head>
-<body>
+<link rel="stylesheet" href="../articles/article.css?v=15600ac9ca49"><script defer src="../articles/resource-banners.js?v=a16ebc00bc94"></script><style>.card-title a{text-decoration:none}.card-title a:hover{color:var(--calm-blue)}</style><link rel="stylesheet" href="../articles/site-phone.css?v=be109ccb5913"><script defer src="../articles/site-phone.js?v=5af6b8ff5b02"></script></head>
+<body data-phone-site="1">
 <a class="skip-link" href="#view">К содержанию</a>
 
   <div class="page-shell" id="top">
@@ -25,7 +25,12 @@
             <image href="../assets/gallery-logo-original.png" width="490" height="490"></image>
           </svg>
           <span class="brand-fallback" aria-hidden="true">г</span>
-        </a>
+        </a><button class="brand-mark phone-search-toggle" type="button" aria-label="Открыть поиск" aria-expanded="false" aria-controls="material-search">
+          <svg class="brand-pill-logo" viewBox="88 112 306 303" aria-hidden="true" focusable="false">
+            <image href="../assets/gallery-logo-original.png" width="490" height="490"></image>
+          </svg>
+          <span class="brand-fallback" aria-hidden="true">г</span>
+        <svg class="phone-search-back" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="m12 4-6 6 6 6"/></svg></button>
         <label class="visually-hidden" for="material-search">Поиск по статьям, категориям и циклам</label>
         <input id="material-search" class="search-field" type="search" placeholder="БЛОГ ГАРДАРИ: ПОИСК ПО КАТЕГОРИЯМ И ЦИКЛАМ..." spellcheck="false" aria-controls="search-results" aria-expanded="false">
         <button class="search-submit" type="submit" aria-label="Найти статью или тему">

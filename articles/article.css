@@ -876,4 +876,7 @@ body[data-photo-layout="ribbon"] .photo-series .article-figure{margin:0 0 15px}
 .promo-d p{text-align:center;text-wrap:balance}
 .promo-d .promo-image:focus-visible{outline:2px solid #fff;outline-offset:-4px}
 
+/* Owner: phone resource actions have the same height as Share article. */
+@media(max-width:680px){.resource-promo .promo-action{min-height:54px;padding:13px 20px;font:700 12px/1.25 var(--mono)}}
+
 @media(prefers-reduced-motion:reduce){.promo-action{transition:none}}

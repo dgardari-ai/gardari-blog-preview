@@ -1,0 +1,143 @@
+/* Shared phone system accepted 05.11.2026; wide layouts retain the original base. */
+.search-rail .phone-search-toggle { display: none; }
+@media (max-width: 680px) {
+  body[data-phone-site="1"] {
+    --phone-working-width: min(calc(100vw - 28px), 540px);
+    --phone-reference-size: clamp(46px, calc((100vw - 52px) / 5), 61px);
+    /* Keep 60% of the former tab gap; widen the logo-to-tabs gap from 10 to 14px. */
+    --phone-menu-size: calc((var(--phone-working-width) * .4 + var(--phone-reference-size) * 3 - 8px) / 5);
+  }
+  .phone-site-ready .header-sticky {
+    padding-bottom: 20px;
+    margin-bottom: -20px;
+  }
+  .phone-site-ready .header-sticky::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -12px;
+    bottom: 0;
+    left: calc((100% - 100vw) / 2);
+    right: calc((100% - 100vw) / 2);
+    background: #fff;
+    pointer-events: none;
+  }
+  .phone-site-ready .matrix-header {
+    position: relative;
+    grid-template-columns: var(--phone-menu-size) minmax(0, 1fr);
+    gap: 14px;
+    height: var(--phone-menu-size);
+  }
+  .phone-site-ready .matrix-nav {
+    grid-column: 2;
+    grid-template-columns: repeat(4, var(--phone-menu-size));
+    justify-content: space-between;
+    gap: 0;
+    transition: opacity 160ms ease, visibility 160ms;
+  }
+  .phone-site-ready .matrix-nav .section-tab {
+    width: var(--phone-menu-size);
+    height: var(--phone-menu-size);
+  }
+  .phone-site-ready .search-rail {
+    position: absolute;
+    inset: 0 auto auto 0;
+    z-index: 2;
+    width: var(--phone-menu-size);
+    height: var(--phone-menu-size);
+    padding: 6px;
+    /* Do not wait for the inherited page-entrance mask to reveal the circle. */
+    opacity: 1;
+    transition: width 300ms cubic-bezier(.2,.8,.2,1);
+  }
+  .phone-site-ready .search-rail.phone-search-awake {
+    transform-origin: center;
+    animation: phone-search-awake 480ms ease-in-out 120ms 3;
+  }
+  .phone-site-ready .search-rail > a.brand-mark { display: none; }
+  .phone-site-ready .phone-search-toggle {
+    display: grid;
+    flex: 0 0 calc(var(--phone-menu-size) - 14px);
+    width: calc(var(--phone-menu-size) - 14px);
+    height: calc(var(--phone-menu-size) - 14px);
+    padding: 0;
+    border: 0;
+    overflow: visible;
+  }
+  .phone-site-ready .phone-search-toggle::after {
+    content: '';
+    position: absolute;
+    inset: -7px;
+    border-radius: 50%;
+  }
+  .phone-search-toggle .phone-search-back { display: none; }
+  .phone-site-ready .search-field,
+  .phone-site-ready .search-submit {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    max-width: 0;
+    width: 0;
+    padding: 0;
+    flex-basis: 0;
+    transition: opacity 160ms ease;
+  }
+  .phone-menu-open .search-rail { width: 100%; }
+  .phone-menu-open .matrix-nav { opacity: 0; visibility: hidden; pointer-events: none; }
+  .phone-menu-open .search-field {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    max-width: 100%;
+    width: auto;
+    padding: 11px 8px 11px 12px;
+    flex: 1 1 auto;
+  }
+  .phone-menu-open .search-submit {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    max-width: 34px;
+    width: 34px;
+    flex: 0 0 34px;
+  }
+  .phone-menu-open .phone-search-toggle .brand-pill-logo { display: none; }
+  .phone-menu-open .phone-search-toggle .phone-search-back {
+    display: block;
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .phone-site-ready .main-article > .article-heading { padding-bottom: 0; }
+  .phone-site-ready .main-article > .current-article-card {
+    width: 100%;
+    margin: 14px auto 22px;
+  }
+  .phone-site-ready .footer-share-actions,
+  .phone-site-ready .footer-resource-nav { width: 100%; }
+  .phone-site-ready .footer-resource-nav { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .phone-site-ready .main-article h2,
+  .phone-site-ready .main-article .explanation h3,
+  .phone-site-ready .photo-series,
+  .phone-site-ready .sidebar-block,
+  .phone-site-ready .section-heading,
+  .phone-site-ready .material-card,
+  .phone-site-ready #categories,
+  .phone-site-ready #cycles { scroll-margin-top: calc(var(--phone-menu-size) + 44px); }
+}
+@keyframes phone-search-awake {
+  0%, 100% { transform: scale(1); }
+  40% { transform: scale(1.12); }
+  75% { transform: scale(.97); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .phone-site-ready .search-rail.phone-search-awake { animation: none; }
+  .phone-site-ready .search-rail,
+  .phone-site-ready .matrix-nav,
+  .phone-site-ready .search-field,
+  .phone-site-ready .search-submit { transition: none; }
+}
