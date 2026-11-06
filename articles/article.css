@@ -878,6 +878,8 @@ body[data-photo-layout="ribbon"] .photo-series .article-figure{margin:0 0 15px}
 
 /* Owner: phone resource actions have the same height as Share article. */
 @media(max-width:680px){.resource-promo .promo-action{min-height:54px;padding:13px 20px;font:700 12px/1.25 var(--mono)}}
+/* Owner: both tablet views match the Share action height and typography. */
+@media(min-width:681px) and (max-width:1024px){.resource-promo .promo-action{min-height:54px;font:700 12px/1.25 var(--mono)}}
 @media(max-width:680px){.related-recommendation .simple-link small{font-size:12px;line-height:1.4}}
 
 @media(prefers-reduced-motion:reduce){.promo-action{transition:none}}
