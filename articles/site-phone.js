@@ -54,7 +54,12 @@
         }
       }
     }
-    toggle.addEventListener('click', () => setOpen(!open, true));
+    toggle.addEventListener('click', event => {
+      const opening = !open;
+      const keyboard = event.detail === 0;
+      setOpen(opening, opening || keyboard);
+      if (!opening && !keyboard) toggle.blur();
+    });
     form.addEventListener('pointerdown', stopIntro, {once: true});
     form.addEventListener('click', event => {
       if (event.target.closest('.search-result')) setOpen(false);

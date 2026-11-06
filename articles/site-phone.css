@@ -54,6 +54,13 @@
     transform-origin: center;
     animation: phone-search-awake 480ms ease-in-out 120ms 3;
   }
+  .phone-site-ready .search-rail:focus-within { box-shadow: none; }
+  .phone-site-ready .phone-search-toggle:focus { outline: none; }
+  .phone-site-ready .phone-search-toggle:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 3px;
+  }
+  .phone-menu-open .search-rail:focus-within { box-shadow: 0 0 0 2px var(--ink); }
   .phone-site-ready .search-rail > a.brand-mark { display: none; }
   .phone-site-ready .phone-search-toggle {
     display: grid;
@@ -113,6 +120,7 @@
     stroke-linejoin: round;
   }
   .phone-site-ready .main-article > .article-heading { padding-bottom: 0; }
+  .phone-site-ready .main-article > .mobile-contents { margin-top: 14px; }
   .phone-site-ready .main-article > .current-article-card {
     width: 100%;
     margin: 14px auto 22px;
