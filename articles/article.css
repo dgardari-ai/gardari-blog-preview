@@ -883,3 +883,18 @@ body[data-photo-layout="ribbon"] .photo-series .article-figure{margin:0 0 15px}
 @media(max-width:680px){.related-recommendation .simple-link small{font-size:12px;line-height:1.4}}
 
 @media(prefers-reduced-motion:reduce){.promo-action{transition:none}}
+
+/* Accepted reading transition v4 · Denis, 08.11.2026. */
+
+.article-body .reading-next{margin:28px 0 0;scroll-margin-top:300px}
+.reading-next-label{display:block;margin:0 0 8px;color:var(--muted);font:500 11px/1.4 var(--mono);letter-spacing:.02em}
+.reading-next-row{display:grid;grid-template-columns:max-content 9px minmax(0,1fr);gap:6px;align-items:baseline}
+.reading-next-date{color:#52748a;white-space:nowrap;font:500 16.9px/1.5 var(--mono)}
+.reading-next-separator{color:var(--muted);font:500 16.9px/1.5 var(--mono)}
+.article-body .reading-next-link{min-width:0;color:var(--ink);font:700 16.9px/1.5 var(--mono);text-decoration:none;overflow-wrap:anywhere}
+.reading-next-link:hover{color:var(--calm-blue)}
+.reading-next-link:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+@media(max-width:680px){.article-body .reading-next{scroll-margin-top:190px}.links-column [data-next-part-duplicate="1"]{display:none}}
+
+/* Long source headings must fit the narrow phone column without changing words. */
+@media(max-width:380px){.article-heading h1{overflow-wrap:anywhere}}
