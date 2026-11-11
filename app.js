@@ -106,10 +106,10 @@ function buildFooterResources() {
   const nav = document.getElementById('footer-resource-nav');
   if (!nav || nav.childElementCount) return;
   const resources = [
-    { label:'Арт-галерея', lines:['АРТ','ГАЛЕРЕЯ'], href:'https://dgardari-ai.github.io/gardari-gallery-preview/' },
-    { label:'Концепт-бюро', lines:['КОНЦЕПТ','БЮРО'], href:'https://dgardari-ai.github.io/kb-gardari/' },
-    { label:'Платформа методов', lines:['ПЛАТФОРМА','МЕТОДОВ'], href:'https://dgardari-ai.github.io/gardari-tools-platform/' },
-    { label:'Клуб Гардари', lines:['КЛУБ','ГАРДАРИ'], href:'https://gardari.art/gardari_club' }
+    { label:'Арт-галерея', lines:['АРТ','ГАЛЕРЕЯ'], href:'https://gallery.gardari.art/' },
+    { label:'Концепт-бюро', lines:['КОНЦЕПТ','БЮРО'], href:'https://kb.gardari.art/' },
+    { label:'Платформа методов', lines:['ПЛАТФОРМА','МЕТОДОВ'], href:'https://platforma.gardari.art/' },
+    { label:'Клуб Гардари', lines:['КЛУБ','ГАРДАРИ'], href:'https://club.gardari.art/' }
   ];
   resources.forEach((item,index)=>{
     const link = document.createElement('a');
